@@ -1,0 +1,77 @@
+<div
+  class="card project-card p-4 rounded-md"
+  appSpotlight
+  [spotlightRadius]="300"
+  [ngClass]="view()"
+>
+  @if (view() === 'grid') { @if (project().imageUrl) {
+  <img
+    [src]="project().imageUrl"
+    [alt]="project().title"
+    class="hero-image mb-4 rounded-md"
+  />
+  } @else {
+  <div
+    class="placeholder-image mb-4 rounded-md flex items-center justify-center overflow-hidden"
+    [style.backgroundColor]="getPlaceholderColor()"
+  >
+    <span class="text-7xl font-medium text-center opacity-70">{{ project().title }}</span>
+  </div>
+  } }
+
+  <div class="grow flex-column align-end">
+    <header class="flex items-center gap-4 mb-2">
+      <h3
+        class="font-semibold"
+        [ngClass]="{ 'text-xl': view() === 'grid', 'text-lg': view() === 'list' }"
+      >
+        {{ project().title }}
+      </h3>
+      <div class="chip flex items-center rounded-lg px-2 py-0 text-xs">
+        {{visibilityText()}}
+      </div>
+    </header>
+    <p class="text-secondary mb-2">{{ project().shortDescription }}</p>
+    @if (view() === 'grid') {
+    <ng-container [ngTemplateOutlet]="skills"></ng-container>
+    }
+    <div class="card-footer flex items-center gap-2 mt-4">
+      <section class="left">
+        @if (view() !== 'grid') {
+        <ng-container [ngTemplateOutlet]="skills"></ng-container>
+        }
+      </section>
+      <section class="right flex justify-end gap-2 grow">
+        @if(project().liveUrl) {
+        <a
+          [href]="project().liveUrl"
+          target="_blank"
+          size="small"
+          pButton
+          class="p-button-flat p-button-text"
+        >
+          <i class="material-symbols-outlined">kid_star</i>
+          <span>Live</span>
+        </a>
+        }
+        <a
+          [routerLink]="['/project', project().id]"
+          size="small"
+          pButton
+          class="p-button-flat p-button-primary"
+        >
+          <i class="material-symbols-outlined">arrow_right_alt</i>
+          <span>Details</span>
+        </a>
+      </section>
+    </div>
+  </div>
+</div>
+
+<ng-template #skills>
+  <div class="skills flex flex-wrap gap-2">
+    @for(technology of project().technologies; track technology) {
+    <app-tech-pill [technology]="technology" [flat]="true"></app-tech-pill>
+    }
+  </div>
+</ng-template>

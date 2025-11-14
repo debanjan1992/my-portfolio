@@ -1,0 +1,104 @@
+<div class="project-details flex justify-center">
+  <div class="content w-3/4">
+    <div class="breadcrumbs mb-1 -ml-2">
+      <a
+        [routerLink]="['/portfolio']"
+        size="small"
+        pButton
+        class="p-button-flat p-button-primary p-button-text"
+      >
+        <i class="material-symbols-outlined">arrow_left_alt</i>
+        <span>Details</span>
+      </a>
+    </div>
+    @if(project()) {
+    <main>
+      <header class="flex items-center ps-2">
+        <section class="left flex items-center gap-2 grow">
+          <span class="text-lg font-medium">{{ project().title }}</span>
+          <div class="chip flex items-center rounded-lg px-2 py-0 text-xs">
+            {{visibilityText()}}
+          </div>
+        </section>
+        <section class="right flex gap-2 items-center">
+          <a pButton size="small" target="_blank" [href]="project().liveUrl">
+            <i class="material-symbols-outlined">kid_star</i>
+            <span>View Demo</span>
+          </a>
+          <a
+            pButton
+            size="small"
+            [type]="'secondary'"
+            [outlined]="true"
+            target="_blank"
+            [href]="project().sourceUrl"
+          >
+            <i class="material-symbols-outlined">code</i>
+            <span>Source Code</span>
+          </a>
+        </section>
+      </header>
+      <p-divider></p-divider>
+      <section class="content flex gap-4 mt-4 flex-stretch">
+        <section
+          class="left card rounded-lg overflow-hidden grow"
+          appSpotlight
+          [spotlightRadius]="300"
+        >
+          <p-tabs value="readme">
+            <p-tablist>
+              <p-tab value="readme">
+                <div class="flex items-center">
+                  <span class="material-symbols-outlined me-2">
+                    description
+                  </span>
+                  <span>Readme</span>
+                </div>
+              </p-tab>
+            </p-tablist>
+            <p-tabpanels>
+              <p-tabpanel value="readme">
+                <div class="markdown-content p-4">
+                  <div [innerHTML]="renderedMd()"></div>
+                </div>
+              </p-tabpanel>
+            </p-tabpanels>
+          </p-tabs>
+        </section>
+        <section class="right w-140 rounded-md p-4">
+          <section class="flex-col mb-8">
+            <p class="text-lg mb-2 font-medium">About</p>
+            <p>{{ project().shortDescription }}</p>
+            <div class="skills flex flex-wrap gap-2 mt-2">
+              @for(technology of project().technologies; track technology) {
+              <app-tech-pill [technology]="technology"></app-tech-pill>
+              }
+            </div>
+          </section>
+          <p-divider></p-divider>
+          <section class="flex-col mb-8">
+            <p class="text-lg mb-4 font-medium">Languages</p>
+            <app-bar-visualization [data]="barData()"></app-bar-visualization>
+          </section>
+          <p-divider></p-divider>
+          <section class="flex-col mb-8">
+            <p class="text-sm mb-4">Metadata</p>
+            <div class="field mb-2">
+              <div class="text-sm text-secondary">Size</div>
+              <div class="text-xs">{{ project().size }}kB</div>
+            </div>
+            <div class="field mb-2">
+              <div class="text-sm text-secondary">Last Commit Date</div>
+              <div class="text-xs">{{ project().pushedAt| date : 'longDate'}}</div>
+            </div>
+            <div class="field mb-2">
+              <div class="text-sm text-secondary">Created Date</div>
+              <div class="text-xs">{{ project().createdAt | date : 'longDate'}}</div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+    }
+  </div>
+</div>

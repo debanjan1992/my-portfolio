@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+  .main-container {
+    height: calc(100vh - 8rem); // Adjust based on header height
+  }
+
+  .tab-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.nav-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+}
+
+.nav-container a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--text-color);
+  }
+
+  &.active-link {
+    color: var(--p-primary-color);
+    border-bottom-color: var(--p-primary-color);
+  }
+}
+
+// ::ng-deep .nav-container .p-button {
+//   border-radius: 0;
+// }

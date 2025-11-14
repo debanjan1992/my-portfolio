@@ -1,0 +1,48 @@
+<div class="main-container flex flex-col md:flex-row gap-6 p-4 md:p-6">
+  <aside class="bio-container w-full md:w-1/4 md:max-w-sm shrink-0">
+    <app-bio></app-bio>
+  </aside>
+  <main class="content-container w-full md:w-3/4">
+    <div class="nav-container overflow-x-auto whitespace-nowrap">
+      <a
+        pButton
+        class="p-button-text px-2"
+        routerLink="welcome"
+        routerLinkActive="active-link"
+      >
+        <i class="material-symbols-outlined hidden md:inline">home</i>
+        <span>Welcome</span>
+      </a>
+      <a
+        pButton
+        class="p-button-text px-2"
+        routerLink="portfolio"
+        routerLinkActive="active-link"
+      >
+        <i class="material-symbols-outlined hidden md:inline">work</i>
+        <span>Portfolio</span>
+      </a>
+      <a
+        pButton
+        class="p-button-text px-2"
+        routerLink="experience"
+        routerLinkActive="active-link"
+      >
+        <i class="material-symbols-outlined hidden md:inline">star</i>
+        <span>Experience</span>
+      </a>
+      <a
+        pButton
+        class="p-button-text px-2"
+        routerLink="contact"
+        routerLinkActive="active-link"
+      >
+        <i class="material-symbols-outlined hidden md:inline">email</i>
+        <span>Get in touch</span>
+      </a>
+    </div>
+    <div class="tab-content px-4 py-6">
+      <router-outlet />
+    </div>
+  </main>
+</div>

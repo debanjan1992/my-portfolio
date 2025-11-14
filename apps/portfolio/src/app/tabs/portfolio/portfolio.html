@@ -1,0 +1,41 @@
+<div class="portfolio-container p-4">
+  <div class="filters flex justify-between items-center mb-4">
+    <div class="flex gap-2">
+      <p-multiSelect
+        [options]="skillDropdownOptions()"
+        [showHeader]="false"
+        [(ngModel)]="selectedTechnologies"
+        optionLabel="name"
+        size="small"
+        placeholder="Technology"
+      ></p-multiSelect>
+    </div>
+    <div class="view-switch flex gap-2">
+      <button
+        pButton
+        size="small"
+        [outlined]="true"
+        [severity]="view() === 'grid' ? 'primary' : 'secondary'"
+        (click)="view.set('grid')"
+      >
+        <i class="material-symbols-outlined text-sm">grid_view</i>
+      </button>
+      <button
+        pButton
+        size="small"
+        [outlined]="true"
+        [severity]="view() === 'list' ? 'primary' : 'secondary'"
+        (click)="view.set('list')"
+      >
+        <i class="material-symbols-outlined text-sm">list</i>
+      </button>
+    </div>
+  </div>
+  <div
+    [ngClass]="view() === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4' : 'flex flex-col gap-4'"
+  >
+    @for(project of filteredProjects(); track project) {
+    <app-project-card [project]="project" [view]="view()" />
+    }
+  </div>
+</div>

@@ -1,0 +1,23 @@
+@if (processedData().length > 0) {
+<div class="bar-wrapper mb-2">
+  <div class="bar-container mb-4">
+    @for (item of processedData(); track item.name) {
+    <div
+      class="bar-segment"
+      [style.width.%]="item.percent"
+      [style.background-color]="getColor(item.name)"
+      [title]="item.name + ': ' + item.formattedPercent"
+    ></div>
+    }
+  </div>
+
+  <div class="legend-container flex flex-wrap gap-2">
+    @for (item of processedData(); track item.name) {
+    <div class="legend-item text-xs flex items-center">
+      <app-tech-pill [technology]="item.name" [flat]="true"></app-tech-pill>
+      <span class="percent text-secondary">{{ item.formattedPercent }}</span>
+    </div>
+    }
+  </div>
+</div>
+}

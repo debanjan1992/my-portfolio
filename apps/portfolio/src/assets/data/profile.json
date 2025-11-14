@@ -1,0 +1,35 @@
+{
+  "profile": {
+    "id": "PSBSWXffl4fOX7twutrV",
+    "picture": "assets/pic.webp",
+    "email": "debanjansaha1992@gmail.com",
+    "lastName": "Saha",
+    "socials": {
+      "facebook": {
+        "url": "https://www.facebook.com/debanjansaha1992",
+        "username": "debanjansaha1992"
+      },
+      "linkedin": {
+        "username": "debanjan-saha-78a83893",
+        "url": "https://www.linkedin.com/in/debanjan-saha-78a83893/"
+      },
+      "github": {
+        "username": "debanjan1992",
+        "url": "https://github.com/debanjan1992"
+      },
+      "instagram": {
+        "username": "travellingcoder",
+        "url": "https://www.instagram.com/travellingcoder/"
+      }
+    },
+    "address": {
+      "city": "Bangalore",
+      "country": "India",
+      "state": "Karnataka"
+    },
+    "firstName": "Debanjan",
+    "bio": "Skilled web developer focused on building dynamic, user-friendly, and responsive websites. Proficient in front-end and back-end technologies, committed to clean code and innovation.",
+    "aboutUrl": "assets/detailed-bio.webp",
+    "title": "Senior Developer @FICO"
+  }
+}

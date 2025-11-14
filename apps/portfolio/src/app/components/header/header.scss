@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+::ng-deep .logo {
+  color: var(--text-color);
+}

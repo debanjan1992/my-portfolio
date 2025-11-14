@@ -1,0 +1,14 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "emitDecoratorMetadata": false,
+    "target": "es2022",
+    "module": "preserve",
+    "lib": ["es2020", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@portfolio/models": ["libs/models/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,65 @@
+<div class="contact-container p-4 flex justify-center">
+  <div
+    class="wrapper w-3/5 p-8 card rounded-md"
+    appSpotlight
+    [spotlightRadius]="300"
+  >
+    <div class="header mb-8 text-sm flex items-center gap-2 text-secondary">
+      <span class="material-symbols-outlined"> contact_page </span>
+      <em>{{ headerText() }}</em>
+    </div>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="flex flex-col gap-2 mb-4">
+        <label for="username" class="text-sm"
+          >Name<span class="required">*</span></label
+        >
+        <input pInputText id="name" formControlName="name" />
+        @if(name.touched && name.dirty && name.errors?.required) {
+        <small class="error-text">- This field is required</small>
+        } @if(name.touched && name.dirty && name.errors?.minlength) {
+        <small class="error-text"
+          >- Name should be minimum 3 characters in length.</small
+        >
+        }
+      </div>
+      <div class="flex flex-col gap-2 mb-4">
+        <label for="email" class="text-sm"
+          >Email<span class="required">*</span></label
+        >
+        <input pInputText id="email" formControlName="email" />
+        @if(email.touched && email.dirty && email.errors?.required) {
+        <small class="error-text">- This field is required</small>
+        } @if(email.touched && email.dirty && email.errors?.email) {
+        <small class="error-text">- Email should be valid.</small>
+        }
+      </div>
+      <div class="flex flex-col gap-2 mb-4">
+        <label for="message" class="text-sm"
+          >Message<span class="required">*</span></label
+        >
+        <textarea
+          id="message"
+          rows="5"
+          cols="30"
+          pTextarea
+          formControlName="message"
+        ></textarea>
+        @if(message.touched && message.dirty && message.errors?.required) {
+        <small class="error-text">- This field is required</small>
+        } @if(message.touched && message.dirty && message.errors?.minlength) {
+        <small class="error-text"
+          >- Message should be minimum 10 characters in length.</small
+        >
+        }
+      </div>
+      <div class="actions flex justify-end">
+        <p-button [disabled]="contactForm.invalid" type="submit"
+          >Send Message</p-button
+        >
+      </div>
+    </form>
+    <!-- <pre>
+        {{message.errors | json}}
+    </pre> -->
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="px-8 experience-view">
+  <div class="experiences w-full pt-8">
+    @for (experience of store.experiences(); track $index) {
+    <div class="experience-wrapper mb-12">
+      <app-experience-item [experience]="experience"></app-experience-item>
+    </div>
+    }
+  </div>
+</div>

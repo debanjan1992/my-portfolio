@@ -1,0 +1,59 @@
+<div
+  class="bio-card card overflow-hidden rounded-xl"
+  appSpotlight
+  [spotlightRadius]="300"
+>
+  <div class="background-image">
+    <img [src]="store.profile()?.picture" [alt]="store.fullName()" />
+  </div>
+  <div class="content">
+    <div class="info">
+      <h2 class="text-3xl font-bold mb-1 full-name ps-2">{{ store.fullName()}}</h2>
+      <div class="flex items-center">
+        <span class="material-symbols-outlined text-secondary">
+          enterprise
+        </span>
+        <h4 class="text-lg font-medium ms-2">{{ store.profile()?.title }}</h4>
+      </div>
+      <div class="flex items-center">
+        <span class="material-symbols-outlined text-secondary">
+          location_on
+        </span>
+        <span class="ms-2 text-sm"
+          >{{store.profile()?.address.city + ', ' +
+          store.profile()?.address.country}}</span
+        >
+      </div>
+    </div>
+    <div class="glass-panel p-4 rounded-3xl mt-4">
+      <p>{{ store.profile()?.bio}}</p>
+      <p-divider></p-divider>
+      <div class="flex items-center mt-1 text-primary">
+        <span class="material-symbols-outlined"> email </span>
+        <a class="ms-2" [href]="'mailto:' + store.profile()?.email"
+          >{{ store.profile()?.email }}</a
+        >
+      </div>
+    </div>
+    <div class="social-links flex items-center gap-4 text-sm mt-4 text-secondary">
+      <div class="flex items-center">
+        <span class="material-symbols-outlined text-secondary"> link </span>
+        <a
+          class="ms-2"
+          [href]="store.profile()?.socials.github.url"
+          target="_blank"
+          >Github</a
+        >
+      </div>
+      <div class="flex items-center">
+        <span class="material-symbols-outlined text-secondary"> link </span>
+        <a
+          class="ms-2"
+          [href]="store.profile()?.socials.linkedin.url"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

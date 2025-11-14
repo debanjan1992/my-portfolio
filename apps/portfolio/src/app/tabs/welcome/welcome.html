@@ -1,0 +1,21 @@
+<div class="welcome-container flex flex-col md:flex-row gap-8">
+  <div
+    class="about-me-column card w-full grow md:w-8/12 rounded-md px-8 py-4 overflow-hidden"
+    appSpotlight
+    [spotlightRadius]="350"
+  >
+    <app-about-me></app-about-me>
+  </div>
+  <div
+    class="technologies-column w-full md:w-3/12 p-4"
+    appSpotlight
+    [spotlightRadius]="200"
+  >
+    <h3 class="text-xl mb-6">Technologies I've Worked with</h3>
+    <div class="skills flex flex-wrap gap-2">
+      @for(tech of store.technologies(); track tech) {
+      <app-skill-tag [skill]="tech" />
+      }
+    </div>
+  </div>
+</div>

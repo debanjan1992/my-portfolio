@@ -1,0 +1,60 @@
+<div
+  class="experience card flex flex-col md:flex-row gap-8 py-6 px-4 rounded-md overflow-hidden"
+  appSpotlight
+  [spotlightRadius]="500"
+>
+  <div class="flex gap-8 w-full">
+    <section class="left">
+      <p-avatar
+        [image]="experience().logo"
+        size="xlarge"
+        shape="square"
+        styleClass="company-logo"
+      ></p-avatar>
+    </section>
+    <section class="middle grow">
+      <div class="header mb-4">
+        <div class="text-xl font-semibold mb-2">{{ experience().company}}</div>
+        <div class="flex items-center gap-1">
+          <app-svg-icon icon="location" class="mt-1" />
+          <span>{{ experience().city }}, {{ experience().state }}</span>
+        </div>
+        <div class="flex gap-2 time text-secondary">
+          <span>{{ experience().startDate | date : 'longDate' }}</span>
+          <span>-</span>
+          <span
+            >{{experience().endDate === 0 ? 'Current' : experience().endDate |
+            date : 'longDate' }}</span
+          >
+          @if( experience().endDate !== 0) {
+          <span class="duration"
+            >({{ getDurationInYearsAndMonths( experience().startDate,
+            experience().endDate ) }})</span
+          >
+          }
+        </div>
+      </div>
+      @for(role of experience().roles; track $index) {
+      <div class="single-experience mb-4">
+        <span class="font-semibold text-lg">{{ role.designation}}</span>
+        <div class="flex gap-2 time text-secondary">
+          <span>{{ role.startDate | date : 'longDate' }}</span>
+          <span>-</span>
+          <span
+            >{{role.endDate === 0 ? 'Current' : role.endDate | date : 'longDate'
+            }}</span
+          >
+        </div>
+      </div>
+      }
+      <div class="skills-wrappe">
+        <span class="text-sm text-secondary">Skills</span>
+        <div class="skills flex flex-wrap gap-2 mt-2">
+          @for(tech of experience().technologies; track $index) {
+            <app-tech-pill [technology]="tech"></app-tech-pill>
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

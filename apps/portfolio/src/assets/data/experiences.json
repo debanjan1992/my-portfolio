@@ -1,0 +1,130 @@
+{
+    "experiences": [
+        {
+            "id": "93VXqQVjy0MiF9PqU91F",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/logos%2Ffico_logo.webp?alt=media&token=917ef908-53da-45bf-b899-e73e9d15b074",
+            "startDate": 1725129000000,
+            "company": "FICO",
+            "type": "full-time",
+            "roles": [
+                {
+                    "endDate": 0,
+                    "startDate": 1725129000000,
+                    "designation": "Senior Engineer"
+                }
+            ],
+            "technologies": [
+                "angular",
+                "typescript",
+                "scss",
+                "microfrontends",
+                "ngrx",
+                "nx workspaces",
+                "gojs",
+                "playwright"
+            ],
+            "state": "Karnataka",
+            "endDate": 0,
+            "city": "Bangalore"
+        },
+        {
+            "id": "gVUJlqKkpaPGkyNNMimw",
+            "company": "Infosys",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/logos%2Finfosys_logo.webp?alt=media&token=4a8bb079-7308-45f4-8183-93f9b1a9c7b5",
+            "state": "Maharashtra",
+            "endDate": 1519842600000,
+            "startDate": 1404153000000,
+            "type": "full-time",
+            "roles": [
+                {
+                    "endDate": 1448908200000,
+                    "designation": "Systems Engineer",
+                    "startDate": 1404153000000
+                },
+                {
+                    "startDate": 1448908200000,
+                    "endDate": 1519842600000,
+                    "designation": "Senior Systems Engineer"
+                }
+            ],
+            "technologies": [
+                "java",
+                "angularjs",
+                "angular",
+                "jquery",
+                "html",
+                "css",
+                "javascript"
+            ],
+            "city": "Pune"
+        },
+        {
+            "id": "of3EhS2imDPT0tdSJ1si",
+            "company": "Mastercard",
+            "technologies": [
+                "react",
+                "redux",
+                "webpack",
+                "typescript",
+                "scss",
+                "jquery",
+                "html",
+                "css",
+                "javascript",
+                "playwright",
+                "mixpanel",
+                "nodejs",
+                "eslint",
+                "storybook"
+            ],
+            "city": "Pune",
+            "endDate": 1727721000000,
+            "type": "full-time",
+            "startDate": 1617215400000,
+            "logo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/logos%2Fmastercard_logo.webp?alt=media&token=9d05f103-3349-4520-8292-535b7f9dd4c9",
+            "roles": [
+                {
+                    "endDate": 1727721000000,
+                    "designation": "Senior System Development Engineer II (Level 7)",
+                    "startDate": 1617215400000
+                }
+            ],
+            "state": "Maharashtra"
+        },
+        {
+            "id": "vem6SZrBhYVgpd70J24S",
+            "roles": [
+                {
+                    "designation": "Software Engineer",
+                    "endDate": 1556649000000,
+                    "startDate": 1519842600000
+                },
+                {
+                    "endDate": 1617215400000,
+                    "startDate": 1519842600000,
+                    "designation": "Tech Lead"
+                }
+            ],
+            "state": "Maharashtra",
+            "company": "NICE",
+            "type": "full-time",
+            "city": "Pune",
+            "technologies": [
+                "angularjs",
+                "angular",
+                "karma",
+                "protractor",
+                "typescript",
+                "scss",
+                "nodejs",
+                "eslint",
+                "git",
+                "java",
+                "spring boot"
+            ],
+            "startDate": 1519842600000,
+            "logo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/logos%2Fnice_systems_logo.webp?alt=media&token=b8b3fa98-def8-4245-b4eb-a38048ea1d71",
+            "endDate": 1617215400000
+        }
+    ]
+}

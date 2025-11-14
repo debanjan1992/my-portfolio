@@ -1,0 +1,154 @@
+.markdown-content {
+  line-height: 1.75;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  /* --- HEADINGS --- */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  /* --- PARAGRAPHS & LISTS --- */
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: disc;
+    margin-bottom: 1.5rem;
+    padding-left: 1.6rem;
+  }
+  ol {
+    list-style: decimal;
+    margin-bottom: 1.5rem;
+    padding-left: 1.6rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.4rem; /* Spacing between bullet and text */
+
+    &::marker {
+      color: var(--p-primary-color); /* Colored bullets */
+      font-weight: bold;
+    }
+  }
+
+  /* --- LINKS --- */
+  a {
+    color: var(--p-primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    &:hover {
+      color: var(--p-primary-color-hover);
+      border-bottom-color: var(--p-primary-color-hover);
+    }
+  }
+
+  blockquote {
+    border-left: 5px solid var(--p-primary-color); /* Accent color (e.g., Blue) */
+    background-color: var(--bg-color-muted); /* Very light gray background */
+    margin: 1.5em 10px;
+    padding: 1em 20px;
+    color: var(--text-color);
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* --- IMAGES --- */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+  }
+
+  /* --- INLINE CODE (`variable`) --- */
+  code {
+    background-color: var(--bg-color-muted);
+    color: var(--text-color);
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+    padding: 0.2em 0.4em;
+    margin: 0 0.15rem;
+    font-size: 0.875em;
+    white-space: break-spaces;
+    border-radius: 6px;
+  }
+
+  /* --- CODE BLOCKS (```js ...) --- */
+  pre {
+    background-color: var(--bg-color-muted);
+    color: var(--text-color);
+    padding: 1.25rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--text-color); /* Subtle border for contrast */
+
+    /* Reset inline code styles inside pre blocks */
+    code {
+      background-color: transparent;
+      color: inherit;
+      padding: 0;
+      font-weight: normal;
+      font-size: 0.9em;
+    }
+  }
+
+  /* --- TABLES --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+  }
+
+  th {
+    background-color: var(--bg-color-muted);
+    text-align: left;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  hr {
+    color: var(--border-color);
+  }
+}
