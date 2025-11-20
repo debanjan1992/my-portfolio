@@ -11,6 +11,8 @@ import { TextareaModule } from 'primeng/textarea';
 import { PortfolioStore } from '../../store/store';
 import { SpotlightDirective } from '../../directives/spotlight.directive';
 import { PortfolioService } from '../../portfolio';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
@@ -27,6 +29,7 @@ import { PortfolioService } from '../../portfolio';
 })
 export class Contact {
   private fb = inject(NonNullableFormBuilder);
+  private messageService = inject(MessageService);
   store = inject(PortfolioStore);
   portfolioService = inject(PortfolioService);
 
@@ -65,6 +68,9 @@ export class Contact {
 
     this.portfolioService
       .sendEmailMessage(this.name.value, this.email.value, this.message.value)
-      .subscribe(console.log);
+      .subscribe({
+        next: () => this.messageService.add({ severity: 'success', summary: 'Email sent successfully!', life: 3000 }),
+        error: () => this.messageService.add({ severity: 'error', summary: 'Failed to send email!', life: 3000 }),
+      });
   }
 }

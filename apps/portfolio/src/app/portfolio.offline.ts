@@ -37,4 +37,18 @@ export class OfflinePortfolioService {
       .get<GetProjectsResponse>('assets/data/projects.json')
       .pipe(map((response) => response.projects.find((p) => p.id === id)));
   }
+
+  public sendEmailMessage(
+    name: string,
+    email: string,
+    message: string
+  ): Observable<any> {
+    return this.http
+      .post<any>('/api/sendEmail', {
+        name,
+        email,
+        message,
+      })
+      .pipe(map((response) => response.project));
+  }
 }

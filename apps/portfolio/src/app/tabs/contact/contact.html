@@ -8,6 +8,9 @@
       <span class="material-symbols-outlined"> contact_page </span>
       <em>{{ headerText() }}</em>
     </div>
+    <header>
+      <p class="text-5xl text-center font-medium">Get in touch</p>
+    </header>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col gap-2 mb-4">
         <label for="username" class="text-sm"
