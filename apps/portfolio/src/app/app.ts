@@ -5,9 +5,10 @@ import { ButtonModule } from 'primeng/button';
 import { RouterOutlet } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { Bio } from "./components/bio/bio";
 
 @Component({
-  imports: [Header, ButtonModule, RouterOutlet, ToastModule],
+  imports: [Header, ButtonModule, RouterOutlet, ToastModule, Bio],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',

@@ -1,35 +1,36 @@
-<header class="flex flex-row justify-between items-center p-4">
-  <section class="left cursor-pointer" [routerLink]="['/']">
-    <p-avatar label="DS" size="large" class="logo"></p-avatar>
-    <span class="text-xl font-semibold ms-2">{{ store.fullName()}}</span>
-  </section>
-  <section class="right flex items-center gap-2">
-    <p-button size="small" [text]="true" (onClick)="toggleDarkMode()">
-      @if(isDarkMode()) {
-      <i
-        class="material-symbols-outlined"
-        pTooltip="Toggle light mode"
-        tooltipPosition="bottom"
-        >light_mode</i
-      >
-      } @else{
-      <i
-        class="material-symbols-outlined"
-        pTooltip="Toggle dark mode"
-        tooltipPosition="bottom"
-        >dark_mode</i
-      >
-      }
-    </p-button>
-    <p-divider layout="vertical" />
-    <div class="flex items-center gap-2 cursor-pointer">
-      <p-avatar
-        [image]="store.profile()?.picture"
-        class="mr-2"
-        size="normal"
-        shape="circle"
-      />
-      <!-- <span class="material-symbols-outlined"> view_sidebar </span> -->
-    </div>
-  </section>
-</header>
+<div
+  class="header-wrapper flex flex-row justify-end items-center py-8 px-4 w-full h-full"
+>
+  <nav class="flex items-center gap-8 text-xl font-medium text-secondary">
+    <a class="mx-2 py-2 px-2" routerLink="/welcome" routerLinkActive="active"
+      >Welcome</a
+    >
+    <a class="mx-2 py-2 px-2" routerLink="/projects" routerLinkActive="active"
+      >Projects</a
+    >
+    <a class="mx-2 py-2 px-2" routerLink="/experience" routerLinkActive="active"
+      >Experience</a
+    >
+    <a class="mx-2 py-2 px-2" routerLink="/contact" routerLinkActive="active"
+      >Get in touch</a
+    >
+  </nav>
+  <p-divider layout="vertical" />
+  <p-button size="small" [text]="true" (onClick)="toggleDarkMode()">
+    @if(isDarkMode()) {
+    <i
+      class="material-symbols-outlined"
+      pTooltip="Toggle light mode"
+      tooltipPosition="bottom"
+      >light_mode</i
+    >
+    } @else{
+    <i
+      class="material-symbols-outlined"
+      pTooltip="Toggle dark mode"
+      tooltipPosition="bottom"
+      >dark_mode</i
+    >
+    }
+  </p-button>
+</div>

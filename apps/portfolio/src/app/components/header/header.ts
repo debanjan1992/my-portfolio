@@ -1,14 +1,13 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PortfolioStore } from '../../store/store';
 import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
-import { AvatarModule } from 'primeng/avatar';
 import { TooltipModule } from 'primeng/tooltip';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
+import { Divider } from 'primeng/divider';
 
 @Component({
   selector: 'app-header',
-  imports: [DividerModule, ButtonModule, AvatarModule, TooltipModule, RouterLink],
+  imports: [ButtonModule, TooltipModule, RouterLink, Divider, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

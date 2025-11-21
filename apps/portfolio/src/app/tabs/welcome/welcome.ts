@@ -1,13 +1,11 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { PortfolioStore } from '../../store/store';
-import { AboutMe } from '../../components/about-me/about-me';
-import { SkillTagComponent } from '../../components/skill-tag/skill-tag';
-import { SpotlightDirective } from '../../directives/spotlight.directive';
+import { WelcomeBanner } from '../../components/welcome-banner/welcome-banner';
 
 @Component({
   selector: 'app-welcome',
-  imports: [ButtonModule, AboutMe, SkillTagComponent, SpotlightDirective],
+  imports: [ButtonModule, WelcomeBanner],
   templateUrl: './welcome.html',
   styleUrl: './welcome.scss',
 })

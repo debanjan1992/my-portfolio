@@ -3,20 +3,21 @@ import { Welcome } from './tabs/welcome/welcome';
 import { Contact } from './tabs/contact/contact';
 import { Experience } from './tabs/experience/experience';
 import { Portfolio } from './tabs/portfolio/portfolio';
-import { Home } from './pages/home/home';
 
 export const appRoutes: Route[] = [
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: 'welcome', component: Welcome, title: 'Debanjan Saha | Welcome' },
   {
-    path: '',
-    component: Home,
-    children: [
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: 'welcome', component: Welcome, title: 'Debanjan Saha | Welcome' },
-      { path: 'portfolio', component: Portfolio, title: 'Debanjan Saha | Portfolio' },
-      { path: 'experience', component: Experience, title: 'Debanjan Saha | Experience' },
-      { path: 'contact', component: Contact, title: 'Debanjan Saha | Contact' },
-    ],
+    path: 'projects',
+    component: Portfolio,
+    title: 'Debanjan Saha | Projects',
   },
+  {
+    path: 'experience',
+    component: Experience,
+    title: 'Debanjan Saha | Experience',
+  },
+  { path: 'contact', component: Contact, title: 'Debanjan Saha | Contact' },
   {
     path: 'project/:id',
     loadComponent: () =>

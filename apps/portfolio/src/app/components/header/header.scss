@@ -1,7 +1,19 @@
-:host {
-  display: block;
-}
+div.header-wrapper {
+  backdrop-filter: blur(10px);
 
-::ng-deep .logo {
-  color: var(--text-color);
+  nav {
+    a {
+      border-bottom: 3px solid transparent;
+      transition: 0.4s;
+      &.active {
+        color: var(--text-color);
+        border-bottom: 3px solid var(--p-primary-color);
+      }
+
+      &:hover {
+        color: var(--text-color);
+        border-bottom: 3px solid var(--p-primary-color);
+      }
+    }
+  }
 }

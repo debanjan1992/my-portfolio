@@ -24,7 +24,8 @@
           }
         ],
         "styles": [
-          "apps/portfolio/src/styles.css",
+          "apps/portfolio/src/variables.css",
+          "apps/portfolio/src/styles.scss",
           "apps/portfolio/src/markdown.scss"
         ],
         "scripts": []

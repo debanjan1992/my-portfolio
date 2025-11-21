@@ -1,5 +1,14 @@
-<app-header></app-header>
-<main class="mt-4">
-  <router-outlet></router-outlet>
+<main class="flex">
+  <aside class="left">
+    <app-bio></app-bio>
+  </aside>
+  <section class="right flex-col overflow-auto">
+    <header>
+      <app-header></app-header>
+    </header>
+    <div class="content h-full mx-40 my-30">
+        <router-outlet></router-outlet>
+    </div>
+  </section>
 </main>
 <p-toast />

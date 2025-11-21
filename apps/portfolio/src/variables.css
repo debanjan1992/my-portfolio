@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+
+html {
+  /* Background and Surface Colors */
+  --bg-color: white;
+  --bg-color-inverse: black;
+  --bg-color-muted: var(--color-neutral-200);
+  --sidebar-bg-color: var(--color-zinc-100);
+
+  /* Text Colors */
+  --text-color: var(--color-neutral-950);
+  --text-color-inverse: var(--color-neutral-50);
+  --text-secondary-color: var(--color-neutral-600);
+  --text-highlight-start-color: var(--color-red-500);
+  --text-highlight-end-color: var(--color-orange-900);
+
+  /* Border Colors */
+  --border-color: var(--color-neutral-300);
+
+  /* Spotlight colors */
+  --spotlight-highlight-color: var(--color-rose-300);
+  --spotlight-color-start: rgba(0, 0, 0, 0.06);
+  --spotlight-color-end: rgba(255, 255, 255, 0.1);
+
+  &.app-dark-theme {
+    /* Background and Surface Colors */
+    --bg-color: black;
+    --bg-color-inverse: white;
+    --sidebar-bg-color: #111111;
+
+    /* Text Colors */
+    --text-color: var(--color-neutral-50);
+    --text-color-inverse: var(--color-neutral-950);
+    --text-secondary-color: var(--color-neutral-400);
+    --text-highlight-start-color: var(--color-pink-500);
+    --text-highlight-end-color: var(--color-orange-700);
+
+    /* Border Colors */
+    --border-color: var(--color-neutral-700);
+
+    /* Spotlight colors */
+    --spotlight-highlight-color: var(--color-rose-700);
+    --spotlight-color-start: rgba(255, 255, 255, 0.1);
+    --spotlight-color-end: rgba(0, 0, 0, 0.01);
+  }
+}

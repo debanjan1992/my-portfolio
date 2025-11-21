@@ -1,0 +1,36 @@
+.highlight {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--text-highlight-start-color), var(--text-highlight-end-color));
+  color: transparent;
+}
+
+.actions {
+  i {
+    font-size: 1.5rem;
+  }
+  button.primary {
+    background-color: var(--bg-color-inverse);
+    color: var(--text-color-inverse);
+    border-radius: 3rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: var(--p-primary-color);
+      color: var(--text-color);
+    }
+  }
+  button.secondary {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 3rem;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      border-color: var(--text-default);
+    }
+  }
+}
