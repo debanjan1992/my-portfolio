@@ -99,11 +99,16 @@ export const PortfolioStore = signalStore(
         .pipe(map((response) => convertToHtml(response)));
     };
 
+    const downloadResume = () => {
+      window.open(store.profile().resumeUrl, '_blank');
+    };
+
     return {
       fetchProfileDetails,
       fetchExperiences,
       fetchProjects,
       fetchMarkdownRenderAsHTML,
+      downloadResume,
     };
   }),
   withComputed((store) => ({

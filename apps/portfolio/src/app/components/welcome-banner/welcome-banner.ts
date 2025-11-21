@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PortfolioStore } from '../../store/store';
 
 @Component({
   selector: 'app-welcome-banner',
@@ -8,4 +9,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './welcome-banner.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WelcomeBanner {}
+export class WelcomeBanner {
+  store = inject(PortfolioStore);
+}

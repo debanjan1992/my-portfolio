@@ -13,6 +13,7 @@ export interface ProfileDetails {
   };
   socials: Socials;
   careerStart: number;
+  resumeUrl: string;
 }
 
 export interface Experience {
