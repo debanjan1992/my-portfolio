@@ -1,60 +1,75 @@
 <div
-  class="experience card flex flex-col md:flex-row gap-8 py-6 px-4 rounded-md overflow-hidden"
+  class="experience flex flex-col gap-8 p-8 rounded-xl overflow-hidden"
   appSpotlight
   [spotlightRadius]="500"
 >
-  <div class="flex gap-8 w-full">
-    <section class="left">
-      <p-avatar
-        [image]="experience().logo"
-        size="xlarge"
-        shape="square"
-        styleClass="company-logo"
-      ></p-avatar>
-    </section>
-    <section class="middle grow">
-      <div class="header mb-4">
-        <div class="text-xl font-semibold mb-2">{{ experience().company}}</div>
+  <header class="flex gap-8 w-full">
+    <div class="image-wrapper overflow-hidden rounded-2xl">
+      <img [src]="experience().logo" />
+    </div>
+    <section class="company-details flex-column grow">
+      <div class="text-4xl font-bold mb-2">{{ experience().company}}</div>
+      <div class="flex items-center gap-4 text-secondary font-2xl font-medium">
+        <p>Financial Services</p>
         <div class="flex items-center gap-1">
           <app-svg-icon icon="location" class="mt-1" />
           <span>{{ experience().city }}, {{ experience().state }}</span>
         </div>
-        <div class="flex gap-2 time text-secondary">
-          <span>{{ experience().startDate | date : 'longDate' }}</span>
-          <span>-</span>
-          <span
-            >{{experience().endDate === 0 ? 'Current' : experience().endDate |
-            date : 'longDate' }}</span
-          >
-          @if( experience().endDate !== 0) {
-          <span class="duration"
-            >({{ getDurationInYearsAndMonths( experience().startDate,
-            experience().endDate ) }})</span
-          >
-          }
-        </div>
       </div>
-      @for(role of experience().roles; track $index) {
-      <div class="single-experience mb-4">
-        <span class="font-semibold text-lg">{{ role.designation}}</span>
-        <div class="flex gap-2 time text-secondary">
-          <span>{{ role.startDate | date : 'longDate' }}</span>
-          <span>-</span>
-          <span
-            >{{role.endDate === 0 ? 'Current' : role.endDate | date : 'longDate'
-            }}</span
-          >
+    </section>
+    <div class="duration">
+      @if(experience().endDate === 0) {
+      <div class="flex justify-center">
+        <div
+          class="badge text-primary px-4 py-1 text-sm text-center mb-4 rounded-full inline-block"
+        >
+          Current Role
         </div>
       </div>
       }
-      <div class="skills-wrappe">
-        <span class="text-sm text-secondary">Skills</span>
-        <div class="skills flex flex-wrap gap-2 mt-2">
-          @for(tech of experience().technologies; track $index) {
-            <app-tech-pill [technology]="tech"></app-tech-pill>
-          }
-        </div>
+      <div class="flex gap-2 time text-secondary text-md font-semibold">
+        <span>{{ experience().startDate | date : 'MMM yyyy' }}</span>
+        <span>-</span>
+        <span
+          >{{experience().endDate === 0 ? 'Present' : experience().endDate |
+          date : 'MMM yyyy' }}</span
+        >
       </div>
-    </section>
-  </div>
+      <div class="time-span text-sm text-secondary font-medium text-center">
+        {{ getDurationInYearsAndMonths( experience().startDate,
+        experience().endDate ) }}
+      </div>
+    </div>
+  </header>
+  <p-divider></p-divider>
+
+  <section class="middle grow">
+    @for(role of experience().roles; track $index) {
+    <div class="role ps-6 mb-8">
+      <p class="font-semibold text-2xl mb-1">{{ role.designation}}</p>
+      <div class="flex gap-2 time text-secondary">
+        <span>{{ role.startDate | date : 'MMM yyyy' }}</span>
+        <span>-</span>
+        <span
+          >{{role.endDate === 0 ? 'Current' : role.endDate | date : 'MMM yyyy'
+          }}</span
+        >
+      </div>
+      <p class="text-lg text-secondary mt-4">
+        Driving the modernization of legacy financial analytics platforms.
+        Implementing micro-frontend architecture to improve scalability and team
+        autonomy across the organization.
+      </p>
+    </div>
+    }
+    <div class="skills flex flex-wrap gap-2 mt-8">
+      @for(technology of experience().technologies; track technology) {
+      <div
+        class="skill-item uppercase text-secondary rounded-md text-sm font-semibold px-2 py-1"
+      >
+        {{ technology }}
+      </div>
+      }
+    </div>
+  </section>
 </div>

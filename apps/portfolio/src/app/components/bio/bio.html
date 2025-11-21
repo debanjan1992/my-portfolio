@@ -1,4 +1,4 @@
-<div class="bio-card px-12 py-16" appSpotlight [spotlightRadius]="300">
+<div class="bio-card px-12 py-16">
   <div class="profile-image rounded-2xl w-100 h-150">
     <img
       [src]="'assets/pic-light.jpeg'"
@@ -32,12 +32,14 @@
         store.profile()?.address.country}}</span
       >
     </div>
-    <p class="md-4 text-secondary text-lg short-description rounded-xl p-4 ps-6 my-8">
+    <p
+      class="md-4 text-secondary text-lg short-description rounded-xl p-4 ps-6 my-8"
+    >
       {{ store.profile()?.bio}}
     </p>
     <p-divider></p-divider>
     <div class="email flex items-center px-6 py-4 rounded-lg mt-8 gap-4">
-      <div class="email-icon p-3">
+      <div class="email-icon rounded-full flex justify-center p-3">
         <span class="material-symbols-outlined text-primary text-2xl">
           email
         </span>

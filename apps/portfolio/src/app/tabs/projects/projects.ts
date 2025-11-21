@@ -33,7 +33,7 @@ export class Projects {
   store = inject(PortfolioStore);
   activeFilter = signal<string>('all');
   view = signal<'grid' | 'list'>('grid');
-  filters = ['all', 'angular', 'react', 'nodejs'];
+  filters = ['all', 'angular', 'react', 'nodejs', 'chrome extension'];
 
   filteredProjects = linkedSignal(() => {
     return this.store.projects();
@@ -45,32 +45,15 @@ export class Projects {
         return;
       }
 
-      switch (this.activeFilter()) {
-        case 'all':
-          this.filteredProjects.set(this.store.projects());
-          break;
-        case 'angular':
-          this.filteredProjects.set(
-            this.store
-              .projects()
-              .filter((p) => p.technologies.includes('angular'))
-          );
-          break;
-        case 'react':
-          this.filteredProjects.set(
-            this.store
-              .projects()
-              .filter((p) => p.technologies.includes('react'))
-          );
-          break;
-        case 'nodejs':
-          this.filteredProjects.set(
-            this.store
-              .projects()
-              .filter((p) => p.technologies.includes('nodejs'))
-          );
-          break;
+      if (this.activeFilter() === 'all') {
+        this.filteredProjects.set(this.store.projects());
+        return;
       }
+      this.filteredProjects.set(
+        this.store
+          .projects()
+          .filter((p) => p.technologies.includes(this.activeFilter()))
+      );
     });
   }
 }

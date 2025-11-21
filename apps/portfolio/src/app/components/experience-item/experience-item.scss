@@ -1,49 +1,28 @@
-::ng-deep .company-logo {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 12px !important;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  border: 2px solid var(--border-color);
+.experience {
+  background-color: var(--p-surface-900);
+  width: 70%;
 }
 
-
-
-.header .font-semibold {
-  font-size: 1.35rem;
+.badge {
+  border: 1px solid var(--p-primary-color);
 }
 
-.header .text-secondary {
-  font-size: 0.85rem;
+.image-wrapper {
+  width: 80px;
+  height: 80px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
-.highlights-title {
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
-  font-size: 1rem;
+.skill-item {
+  background-color: var(--p-surface-800);
 }
 
-.highlights-card {
-  border: 1px solid var(--card-border-color);
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-.single-experience .font-semibold {
-  font-size: 1.05rem;
-}
-
-.single-experience .text-secondary {
-  font-size: 0.8rem;
-}
-
-.highlights {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  font-size: 0.9rem;
-  li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+section.middle {
+  .role {
+    border-left: 3px solid var(--p-surface-700);
   }
 }

@@ -12,6 +12,7 @@ export interface ProfileDetails {
     country: string;
   };
   socials: Socials;
+  careerStart: number;
 }
 
 export interface Experience {

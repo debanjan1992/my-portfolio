@@ -1,213 +1,201 @@
 {
-    "projects": [
-        {
-            "id": "1lnPNg4eY1QeLYmXB7Cc",
-            "pushedAt": "2024-08-05T08:40:11Z",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/calendar-angular-app/master/README.md",
-            "private": false,
-            "tags": [],
-            "size": 1140,
-            "title": "Calendar",
-            "liveUrl": "https://debanjan1992.github.io/calendar-angular-app/",
-            "createdAt": "2024-08-03T17:30:55Z",
-            "technologies": [
-                "angular",
-                "ngrx",
-                "primeng",
-                "typescript",
-                "scss",
-                "html"
-            ],
-            "defaultBranch": "master",
-            "languages": {
-                "TypeScript": 27741,
-                "SCSS": 8877,
-                "HTML": 9133
-            },
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fcalendar-app.png?alt=media&token=95154500-de60-4d23-a1ac-d1348df40802",
-            "shortDescription": "Calendar is a web application which is almost a look alike to Google Calendar. This application provides a full calendar view to the user and also allows the user to create tasks for a particular day.",
-            "sourceUrl": "https://github.com/debanjan1992/calendar-angular-app",
-            "updatedAt": "2024-08-05T08:36:58Z",
-            "name": "calendar-angular-app"
-        },
-        {
-            "id": "26KUcVLzUPcarnAqB6Gr",
-            "createdAt": "2025-11-12T14:11:14Z",
-            "tags": [],
-            "shortDescription": "Quiz Me is a chrome extension which uses Gemini AI under the hood. This extension can generate few multiple choice questions based on the content of the website he/she is in.",
-            "sourceUrl": "https://github.com/debanjan1992/quiz-me-react-chrome-extension",
-            "technologies": [
-                "react",
-                "chrome extension",
-                "gemini-ai"
-            ],
-            "languages": {
-                "TypeScript": 16659,
-                "JavaScript": 621,
-                "CSS": 708,
-                "HTML": 606
-            },
-            "defaultBranch": "dev",
-            "name": "quiz-me-react-chrome-extension",
-            "pushedAt": "2025-11-12T14:31:28Z",
-            "size": 236,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fquiz-me-now.png?alt=media&token=051af4fa-2ebc-460c-833b-9fadcaf1ae9e",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/quiz-me-react-chrome-extension/dev/README.md",
-            "private": false,
-            "updatedAt": "2025-11-12T14:31:32Z",
-            "title": "Quiz Me"
-        },
-        {
-            "id": "56O7iL8GgcmDQ7tRgWEm",
-            "shortDescription": "Task Management is a web application which is almost a lookj alike to Google Tasks. This application helps the user to create/update tasks, star tasks, create lists and various other operations.",
-            "technologies": [
-                "angular",
-                "ngrx",
-                "primeng",
-                "typescript",
-                "scss",
-                "html",
-                "rxjs"
-            ],
-            "defaultBranch": "master",
-            "updatedAt": "2024-08-09T19:47:38Z",
-            "languages": {
-                "HTML": 20001,
-                "TypeScript": 52056,
-                "SCSS": 19004
-            },
-            "size": 2586,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Ftasks-app.png?alt=media&token=4bed968d-1321-4378-9a3e-295ab970269f",
-            "liveUrl": "https://debanjan1992.github.io/tasks-angular-app/",
-            "createdAt": "2024-08-04T18:02:34Z",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/tasks-angular-app/master/README.md",
-            "pushedAt": "2024-08-09T19:48:19Z",
-            "tags": [],
-            "title": "Task Management",
-            "sourceUrl": "https://github.com/debanjan1992/tasks-angular-app",
-            "private": false,
-            "name": "tasks-angular-app"
-        },
-        {
-            "id": "LfSQNuSh8QLv43UZJ0R5",
-            "name": "ai-summarizer-react",
-            "title": "AI Summarizer",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/ai-summarizer-react/main/README.md",
-            "sourceUrl": "https://github.com/debanjan1992/ai-summarizer-react",
-            "shortDescription": "AI Summarizer is a chrome extension which uses Gemini AI under the hood. This extension helps the user to summarize the content of any webpage he/she is on. The extension provides various options to change the type of generated output.",
-            "size": 461,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fai-summary.png?alt=media&token=8aa2ea23-288f-4840-90ff-45d97c91ca73",
-            "technologies": [
-                "react",
-                "chrome extension",
-                "gemini-ai"
-            ],
-            "defaultBranch": "main",
-            "pushedAt": "2025-11-11T07:27:52Z",
-            "private": false,
-            "tags": [],
-            "languages": {
-                "TypeScript": 12094,
-                "JavaScript": 1222,
-                "CSS": 569,
-                "HTML": 503
-            },
-            "createdAt": "2025-11-11T07:27:19Z",
-            "updatedAt": "2025-11-19T05:41:43Z"
-        },
-        {
-            "id": "QbpFyeKJdfKFlNECUcwy",
-            "size": 15173,
-            "liveUrl": "/",
-            "createdAt": "2025-11-14T05:12:25Z",
-            "shortDescription": "A modern portfolio website where I showcase all my GitHub projects, side-experiments, and open-source contributions. It highlights my frontend engineering skills through interactive demos, detailed project write-ups, and clean UI design — giving visitors a quick overview of my work, tech stack, and coding style.",
-            "pushedAt": "2025-11-19T15:22:08Z",
-            "title": "My Portfolio",
-            "updatedAt": "2025-11-19T15:22:12Z",
-            "tags": [],
-            "defaultBranch": "master",
-            "private": false,
-            "technologies": [
-                "angular",
-                "ngrx",
-                "primeng",
-                "typescript",
-                "scss",
-                "html",
-                "nx",
-                "firebase",
-                "nestjs",
-                "tailwindcss"
-            ],
-            "sourceUrl": "https://github.com/debanjan1992/my-portfolio",
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fmy-portfolio-ss.png?alt=media&token=0dc721e0-ccb6-4d37-9bf3-9f86aa0240a2",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/my-portfolio/master/README.md",
-            "name": "my-portfolio",
-            "languages": {
-                "JavaScript": 1592,
-                "SCSS": 10765,
-                "HTML": 16107,
-                "TypeScript": 50557,
-                "CSS": 2027
-            }
-        },
-        {
-            "id": "slVzaXNXRI9wmrqFjnTA",
-            "updatedAt": "2022-01-17T07:14:41Z",
-            "liveUrl": "",
-            "createdAt": "2022-01-17T06:59:05Z",
-            "sourceUrl": "https://github.com/debanjan1992/wordicle",
-            "name": "wordicle",
-            "shortDescription": "A clean, logic-based puzzle game where users deduce a daily secret word. The interface provides immediate visual cues—Green (correct), Yellow (misplaced), Gray (absent)—to guide the player's next move. It includes features like score tracking and game history persistence, ensuring a seamless experience across all devices.",
-            "tags": [],
-            "pushedAt": "2022-01-17T07:18:26Z",
-            "languages": {
-                "HTML": 1996,
-                "JavaScript": 4478,
-                "CSS": 379,
-                "TypeScript": 36119
-            },
-            "private": false,
-            "imageUrl": "",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/wordicle/main/README.md",
-            "defaultBranch": "main",
-            "title": "Wordicle",
-            "technologies": [
-                "react",
-                "javascript",
-                "materialui",
-                "typescript",
-                "nodejs",
-                "express"
-            ],
-            "size": 333
-        },
-        {
-            "id": "ulciuJaXycV9jCCBErcL",
-            "languages": {
-                "JavaScript": 877,
-                "TypeScript": 10269,
-                "HTML": 3169,
-                "CSS": 2462
-            },
-            "pushedAt": "2025-11-11T18:22:04Z",
-            "defaultBranch": "dev",
-            "name": "eli5-chrome-ext-gemini",
-            "title": "Explain like I'm 5",
-            "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/eli5-chrome-ext-gemini/dev/README.md",
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Feli5.png?alt=media&token=70c0bf18-448a-45af-b42c-0597100ffebc",
-            "private": false,
-            "shortDescription": "Explain like I'm 5 or ELI5 is a chrome extension which uses Gemini AI under the hood. The user can select any text in any website and he can get a 5 year old friendly - AI generated explanation of the selected text.",
-            "sourceUrl": "https://github.com/debanjan1992/eli5-chrome-ext-gemini",
-            "technologies": [
-                "react",
-                "chrome extension",
-                "gemini-ai"
-            ],
-            "updatedAt": "2025-11-11T18:22:07Z",
-            "createdAt": "2025-11-11T17:49:16Z",
-            "size": 363,
-            "tags": []
-        }
-    ]
+  "projects": [
+    {
+      "id": "1lnPNg4eY1QeLYmXB7Cc",
+      "pushedAt": "2024-08-05T08:40:11Z",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/calendar-angular-app/master/README.md",
+      "private": false,
+      "tags": [],
+      "size": 1140,
+      "title": "Calendar",
+      "liveUrl": "https://debanjan1992.github.io/calendar-angular-app/",
+      "createdAt": "2024-08-03T17:30:55Z",
+      "technologies": [
+        "angular",
+        "ngrx",
+        "primeng",
+        "typescript",
+        "scss",
+        "html"
+      ],
+      "defaultBranch": "master",
+      "languages": {
+        "TypeScript": 27741,
+        "SCSS": 8877,
+        "HTML": 9133
+      },
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fcalendar.jpg?alt=media&token=6ca7064a-263d-4a22-857a-947d17230c72",
+      "shortDescription": "Calendar is a web application which is almost a look alike to Google Calendar. This application provides a full calendar view to the user and also allows the user to create tasks for a particular day.",
+      "sourceUrl": "https://github.com/debanjan1992/calendar-angular-app",
+      "updatedAt": "2024-08-05T08:36:58Z",
+      "name": "calendar-angular-app"
+    },
+    {
+      "id": "26KUcVLzUPcarnAqB6Gr",
+      "createdAt": "2025-11-12T14:11:14Z",
+      "tags": [],
+      "shortDescription": "Quiz Me is a chrome extension which uses Gemini AI under the hood. This extension can generate few multiple choice questions based on the content of the website he/she is in.",
+      "sourceUrl": "https://github.com/debanjan1992/quiz-me-react-chrome-extension",
+      "technologies": ["react", "chrome extension", "gemini-ai"],
+      "languages": {
+        "TypeScript": 16659,
+        "JavaScript": 621,
+        "CSS": 708,
+        "HTML": 606
+      },
+      "defaultBranch": "dev",
+      "name": "quiz-me-react-chrome-extension",
+      "pushedAt": "2025-11-12T14:31:28Z",
+      "size": 236,
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fquizme.jpg?alt=media&token=062a4883-e073-4cff-b86d-c4a8bbf0f806",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/quiz-me-react-chrome-extension/dev/README.md",
+      "private": false,
+      "updatedAt": "2025-11-12T14:31:32Z",
+      "title": "Quiz Me"
+    },
+    {
+      "id": "56O7iL8GgcmDQ7tRgWEm",
+      "shortDescription": "Task Management is a web application which is almost a lookj alike to Google Tasks. This application helps the user to create/update tasks, star tasks, create lists and various other operations.",
+      "technologies": [
+        "angular",
+        "ngrx",
+        "primeng",
+        "typescript",
+        "scss",
+        "html",
+        "rxjs"
+      ],
+      "defaultBranch": "master",
+      "updatedAt": "2024-08-09T19:47:38Z",
+      "languages": {
+        "HTML": 20001,
+        "TypeScript": 52056,
+        "SCSS": 19004
+      },
+      "size": 2586,
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Ftasks.jpg?alt=media&token=be6bb0dd-82b4-4343-aaca-7799cff00feb",
+      "liveUrl": "https://debanjan1992.github.io/tasks-angular-app/",
+      "createdAt": "2024-08-04T18:02:34Z",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/tasks-angular-app/master/README.md",
+      "pushedAt": "2024-08-09T19:48:19Z",
+      "tags": [],
+      "title": "Task Management",
+      "sourceUrl": "https://github.com/debanjan1992/tasks-angular-app",
+      "private": false,
+      "name": "tasks-angular-app"
+    },
+    {
+      "id": "LfSQNuSh8QLv43UZJ0R5",
+      "name": "ai-summarizer-react",
+      "title": "AI Summarizer",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/ai-summarizer-react/main/README.md",
+      "sourceUrl": "https://github.com/debanjan1992/ai-summarizer-react",
+      "shortDescription": "AI Summarizer is a chrome extension which uses Gemini AI under the hood. This extension helps the user to summarize the content of any webpage he/she is on. The extension provides various options to change the type of generated output.",
+      "size": 461,
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Faisummarizer.jpg?alt=media&token=5ecedf09-608e-4a2a-98ee-5d233fd0d267",
+      "technologies": ["react", "chrome extension", "gemini-ai"],
+      "defaultBranch": "main",
+      "pushedAt": "2025-11-11T07:27:52Z",
+      "private": false,
+      "tags": [],
+      "languages": {
+        "TypeScript": 12094,
+        "JavaScript": 1222,
+        "CSS": 569,
+        "HTML": 503
+      },
+      "createdAt": "2025-11-11T07:27:19Z",
+      "updatedAt": "2025-11-19T05:41:43Z"
+    },
+    {
+      "id": "QbpFyeKJdfKFlNECUcwy",
+      "size": 15173,
+      "liveUrl": "/",
+      "createdAt": "2025-11-14T05:12:25Z",
+      "shortDescription": "A modern portfolio website where I showcase all my GitHub projects, side-experiments, and open-source contributions. It highlights my frontend engineering skills through interactive demos, detailed project write-ups, and clean UI design — giving visitors a quick overview of my work, tech stack, and coding style.",
+      "pushedAt": "2025-11-19T15:22:08Z",
+      "title": "My Portfolio",
+      "updatedAt": "2025-11-19T15:22:12Z",
+      "tags": [],
+      "defaultBranch": "master",
+      "private": false,
+      "technologies": [
+        "angular",
+        "ngrx",
+        "primeng",
+        "typescript",
+        "scss",
+        "html",
+        "nx",
+        "firebase",
+        "nestjs",
+        "tailwindcss"
+      ],
+      "sourceUrl": "https://github.com/debanjan1992/my-portfolio",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fport.jpg?alt=media&token=050cc8d4-9567-4e36-a76b-f6e4a734f646",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/my-portfolio/master/README.md",
+      "name": "my-portfolio",
+      "languages": {
+        "JavaScript": 1592,
+        "SCSS": 10765,
+        "HTML": 16107,
+        "TypeScript": 50557,
+        "CSS": 2027
+      }
+    },
+    {
+      "id": "slVzaXNXRI9wmrqFjnTA",
+      "updatedAt": "2022-01-17T07:14:41Z",
+      "liveUrl": "",
+      "createdAt": "2022-01-17T06:59:05Z",
+      "sourceUrl": "https://github.com/debanjan1992/wordicle",
+      "name": "wordicle",
+      "shortDescription": "A clean, logic-based puzzle game where users deduce a daily secret word. The interface provides immediate visual cues—Green (correct), Yellow (misplaced), Gray (absent)—to guide the player's next move. It includes features like score tracking and game history persistence, ensuring a seamless experience across all devices.",
+      "tags": [],
+      "pushedAt": "2022-01-17T07:18:26Z",
+      "languages": {
+        "HTML": 1996,
+        "JavaScript": 4478,
+        "CSS": 379,
+        "TypeScript": 36119
+      },
+      "private": false,
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Fword.jpg?alt=media&token=824ed6db-0d64-4f77-83e6-062ed5b76700",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/wordicle/main/README.md",
+      "defaultBranch": "main",
+      "title": "Wordicle",
+      "technologies": [
+        "react",
+        "javascript",
+        "materialui",
+        "typescript",
+        "nodejs",
+        "express"
+      ],
+      "size": 333
+    },
+    {
+      "id": "ulciuJaXycV9jCCBErcL",
+      "languages": {
+        "JavaScript": 877,
+        "TypeScript": 10269,
+        "HTML": 3169,
+        "CSS": 2462
+      },
+      "pushedAt": "2025-11-11T18:22:04Z",
+      "defaultBranch": "dev",
+      "name": "eli5-chrome-ext-gemini",
+      "title": "Explain like I'm 5",
+      "readmeUrl": "https://raw.githubusercontent.com/debanjan1992/eli5-chrome-ext-gemini/dev/README.md",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-354ad.firebasestorage.app/o/projects%2Feli.jpg?alt=media&token=e847572c-c3ea-44bc-943d-fd119cb488de",
+      "private": false,
+      "shortDescription": "Explain like I'm 5 or ELI5 is a chrome extension which uses Gemini AI under the hood. The user can select any text in any website and he can get a 5 year old friendly - AI generated explanation of the selected text.",
+      "sourceUrl": "https://github.com/debanjan1992/eli5-chrome-ext-gemini",
+      "technologies": ["react", "chrome extension", "gemini-ai"],
+      "updatedAt": "2025-11-11T18:22:07Z",
+      "createdAt": "2025-11-11T17:49:16Z",
+      "size": 363,
+      "tags": []
+    }
+  ]
 }

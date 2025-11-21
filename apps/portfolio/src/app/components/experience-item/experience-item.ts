@@ -7,6 +7,7 @@ import { DatePipe } from '@angular/common';
 import { SpotlightDirective } from '../../directives/spotlight.directive';
 import { ChipModule } from 'primeng/chip';
 import { TechnologyPillComponent } from '../technology-pill';
+import { Divider } from 'primeng/divider';
 
 @Component({
   selector: 'app-experience-item',
@@ -17,6 +18,7 @@ import { TechnologyPillComponent } from '../technology-pill';
     SpotlightDirective,
     ChipModule,
     TechnologyPillComponent,
+    Divider,
   ],
   templateUrl: './experience-item.html',
   styleUrl: './experience-item.scss',
@@ -38,7 +40,7 @@ export class ExperienceItem {
 
   getDurationInYearsAndMonths(start: number, end: number) {
     if (end === 0) {
-      return `Current`;
+      end = new Date().getTime();
     }
     const startDate = new Date(start);
     const endDate = new Date(end);
