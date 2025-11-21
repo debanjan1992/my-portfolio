@@ -6,9 +6,11 @@ import { RouterOutlet } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { Bio } from "./components/bio/bio";
+import { Divider } from "primeng/divider";
+import { Footer } from './components/footer/footer';
 
 @Component({
-  imports: [Header, ButtonModule, RouterOutlet, ToastModule, Bio],
+  imports: [Header, ButtonModule, RouterOutlet, ToastModule, Bio, Divider, Footer],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',

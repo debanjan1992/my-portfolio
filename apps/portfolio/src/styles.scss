@@ -41,7 +41,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.25rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,5 +49,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--p-surface-600);
+  background: var(--p-surface-700);
 }

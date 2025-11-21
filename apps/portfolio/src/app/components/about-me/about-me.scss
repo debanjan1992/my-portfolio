@@ -1,13 +1,17 @@
-h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+header {
+  border: 1px solid var(--border-color);
+  background-color: var(--p-surface-900);
+  color: var(--p-surface-300);
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+::ng-deep {
+  div.markdown-content {
+    p {
+      font-size: 1.5rem !important;
+    }
+  }
 }
 
-hr {
-  border-color: var(--card-border-color);
+.about-me {
+  background-color: var(--p-surface-900);
 }

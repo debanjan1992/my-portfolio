@@ -7,6 +7,8 @@ html {
   --bg-color-inverse: black;
   --bg-color-muted: var(--color-neutral-200);
   --sidebar-bg-color: var(--color-zinc-100);
+  --p-tabs-tabpanel-background: transparent !important;
+  --p-tabs-tablist-background: transparent !important;
 
   /* Text Colors */
   --text-color: var(--color-neutral-950);
@@ -27,7 +29,7 @@ html {
     /* Background and Surface Colors */
     --bg-color: black;
     --bg-color-inverse: white;
-    --sidebar-bg-color: #111111;
+    --sidebar-bg-color: var(--p-surface-900);
 
     /* Text Colors */
     --text-color: var(--color-neutral-50);

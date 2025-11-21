@@ -2,8 +2,10 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  HostListener,
   inject,
   input,
+  signal,
 } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { SpotlightDirective } from '../../directives/spotlight.directive';
@@ -12,7 +14,6 @@ import { NgClass, NgTemplateOutlet } from '@angular/common';
 import { ChipModule } from 'primeng/chip';
 import { RouterLink } from '@angular/router';
 import { Project } from '@portfolio/models';
-import { TechnologyPillComponent } from '../technology-pill';
 
 @Component({
   selector: 'app-project-card',
@@ -24,7 +25,6 @@ import { TechnologyPillComponent } from '../technology-pill';
     ChipModule,
     NgTemplateOutlet,
     RouterLink,
-    TechnologyPillComponent,
   ],
   templateUrl: './project-card.html',
   styleUrl: './project-card.scss',
@@ -34,6 +34,7 @@ export class ProjectCardComponent {
   project = input.required<Project>();
   store = inject(PortfolioStore);
   view = input<'grid' | 'list'>();
+  hovered = signal(false);
 
   visibilityText = computed(() => {
     return this.project().private ? 'Private' : 'Public';
@@ -47,5 +48,15 @@ export class ProjectCardComponent {
     }
     const c = (hash & 0x00ffffff).toString(16).toUpperCase();
     return '#' + '00000'.substring(0, 6 - c.length) + c;
+  }
+
+  @HostListener('mouseover')
+  onMouseOver() {
+    this.hovered.set(true);
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.hovered.set(false);
   }
 }

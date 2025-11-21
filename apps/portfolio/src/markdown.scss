@@ -19,25 +19,26 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 600;
     letter-spacing: -0.025em;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
+    padding-bottom: 2rem;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1rem;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.3rem;
+    padding-bottom: 2rem;
   }
 
   h3 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   /* --- PARAGRAPHS & LISTS --- */
   p {
+    font-size: 1.25rem;
     margin-bottom: 1.5rem;
   }
 
@@ -78,7 +79,7 @@
 
   blockquote {
     border-left: 5px solid var(--p-primary-color); /* Accent color (e.g., Blue) */
-    background-color: var(--bg-color-muted); /* Very light gray background */
+    background-color: var(--p-surface-800); /* Very light gray background */
     margin: 1.5em 10px;
     padding: 1em 20px;
     color: var(--text-color);
@@ -97,7 +98,7 @@
 
   /* --- INLINE CODE (`variable`) --- */
   code {
-    background-color: var(--bg-color-muted);
+    background-color: var(--p-surface-950);
     color: var(--text-color);
     font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
     padding: 0.2em 0.4em;
@@ -109,13 +110,13 @@
 
   /* --- CODE BLOCKS (```js ...) --- */
   pre {
-    background-color: var(--bg-color-muted);
+    background-color: var(--p-surface-950);
     color: var(--text-color);
     padding: 1.25rem;
     border-radius: 8px;
     overflow-x: auto;
     margin: 1.5rem 0;
-    border: 1px solid var(--text-color); /* Subtle border for contrast */
+    border: 1px solid var(--border-color); /* Subtle border for contrast */
 
     /* Reset inline code styles inside pre blocks */
     code {
@@ -136,7 +137,7 @@
   }
 
   th {
-    background-color: var(--bg-color-muted);
+    background-color: var(--p-surface-900);
     text-align: left;
     font-weight: 600;
     padding: 0.75rem;

@@ -1,0 +1,51 @@
+<div class="portfolio-container p-4">
+  <header class="flex items-center justify-between mb-16">
+    <section class="heading-text flex-col">
+      <p class="text-primary text-xl tracking-widest font-medium mb-2">
+        projects.json
+      </p>
+      <h1 class="text-6xl font-extrabold mb-2">Selected Works</h1>
+      <p class="text-xl text-secondary font-medium">
+        A collection of projects I've built, led, and contributed to.
+      </p>
+    </section>
+    <section class="filters flex items-center rounded-xl p-4">
+      <!-- TODO: To be enabled -->
+      <!-- <ul class="view-filters flex items-center gap-4">
+        <li
+          class="cursor-pointer p-2 text-secondary rounded-xl flex justify-center"
+          [class.active]="view() === 'grid'"
+          (click)="view.set('grid')"
+        >
+          <i class="material-symbols-outlined">grid_view</i>
+        </li>
+        <li
+          class="cursor-pointer p-2 text-secondary rounded-xl flex justify-center"
+          [class.active]="view() === 'list'"
+          (click)="view.set('list')"
+        >
+          <i class="material-symbols-outlined">list</i>
+        </li>
+      </ul>
+      <p-divider layout="vertical"></p-divider> -->
+      <ul class="tech-filters flex items-center gap-2">
+        @for(filter of filters; track filter) {
+        <li
+          class="cursor-pointer px-4 py-1 text-secondary rounded-lg font-medium capitalize"
+          [class.active]="activeFilter() === filter"
+          (click)="activeFilter.set(filter)"
+        >
+          {{filter}}
+        </li>
+        }
+      </ul>
+    </section>
+  </header>
+  <div
+    [ngClass]="view() === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8' : 'flex flex-col gap-8'"
+  >
+    @for(project of filteredProjects(); track project) {
+    <app-project-card [project]="project" [view]="view()" />
+    }
+  </div>
+</div>

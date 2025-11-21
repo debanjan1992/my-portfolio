@@ -6,6 +6,7 @@ aside.left {
 
 section.right {
   width: 80%;
+  height: 100vh;
 
   header {
     height: 8rem;
@@ -13,5 +14,11 @@ section.right {
     position: sticky;
     top: 0;
     z-index: 1000;
+  }
+
+  footer {
+    height: 8rem;
+    position: relative;
+    bottom: 0;
   }
 }

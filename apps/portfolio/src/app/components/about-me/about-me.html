@@ -1,9 +1,15 @@
-<header class="inline-flex border px-2 items-center gap-2 mb-6 rounded-2xl">
-  <span class="material-symbols-outlined">folder</span>
-  <p class="text-xs text-secondary">{{ title() }} / README.md</p>
-</header>
-<h1 class="text-2xl">Hi, I'm {{ store.fullName() }}</h1>
-<h3 class="text-2xl text-primary font-semibold">React & Angular Specialist | Automation Expert </h3>
-<div class="markdown-content mt-8">
-  <div [innerHTML]="renderedAboutMe()"></div>
-</div>
+<section class="about-me p-8 rounded-2xl">
+  <header
+    class="inline-flex border px-4 py-2 items-center gap-2 mb-6 rounded-md"
+  >
+    <span class="material-symbols-outlined">folder</span>
+    <p class="text-xs text-secondary">{{ title() }} / README.md</p>
+  </header>
+  <h1 class="text-6xl font-extrabold mb-2">About Me</h1>
+  <h3 class="text-3xl text-secondary font-bold">
+    React & Angular Specialist | Automation Expert 
+  </h3>
+  <div class="markdown-content mt-12">
+    <div [innerHTML]="renderedAboutMe()"></div>
+  </div>
+</section>

@@ -2,14 +2,14 @@ import { Route } from '@angular/router';
 import { Welcome } from './tabs/welcome/welcome';
 import { Contact } from './tabs/contact/contact';
 import { Experience } from './tabs/experience/experience';
-import { Portfolio } from './tabs/portfolio/portfolio';
+import { Projects } from './tabs/projects/projects';
 
 export const appRoutes: Route[] = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: Welcome, title: 'Debanjan Saha | Welcome' },
   {
     path: 'projects',
-    component: Portfolio,
+    component: Projects,
     title: 'Debanjan Saha | Projects',
   },
   {

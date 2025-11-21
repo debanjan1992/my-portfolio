@@ -1,37 +1,41 @@
 <div
-  class="card project-card p-4 rounded-md"
+  class="project-card rounded-xl overflow-hidden cursor-pointer h-full"
   appSpotlight
   [spotlightRadius]="300"
   [ngClass]="view()"
+  [routerLink]="['/project', project().id]"
 >
-  @if (view() === 'grid') { @if (project().imageUrl) {
-  <img
-    [src]="project().imageUrl"
-    [alt]="project().title"
-    class="hero-image mb-4 rounded-md"
-  />
-  } @else {
-  <div
-    class="placeholder-image mb-4 rounded-md flex items-center justify-center overflow-hidden"
-    [style.backgroundColor]="getPlaceholderColor()"
-  >
-    <span class="text-7xl font-medium text-center opacity-70">{{ project().title }}</span>
-  </div>
-  } }
-
-  <div class="grow flex-column align-end">
-    <header class="flex items-center gap-4 mb-2">
-      <h3
-        class="font-semibold"
-        [ngClass]="{ 'text-xl': view() === 'grid', 'text-lg': view() === 'list' }"
+  @if (view() === 'grid') {
+  <div class="image-wrapper relative overflow-hidden h-full">
+    <img
+      [src]="project().imageUrl"
+      [alt]="project().title"
+      class="hero-image w-full h-full"
+    />
+    @if(hovered()) {
+    <div class="overlay absolute flex items-center justify-center">
+      <button
+        class="px-6 py-2 rounded-4xl font-medium text-lg cursor-pointer text-default"
       >
+        View Details
+      </button>
+    </div>
+    }
+  </div>
+  }
+
+  <div class="grow flex-column align-end p-4">
+    <header class="flex items-center gap-4 mb-2">
+      <h1 class="font-bold text-2xl" [class.text-primary]="hovered()">
         {{ project().title }}
-      </h3>
+      </h1>
       <div class="chip flex items-center rounded-lg px-2 py-0 text-xs">
         {{visibilityText()}}
       </div>
     </header>
-    <p class="text-secondary mb-2">{{ project().shortDescription }}</p>
+    <p class="text-secondary mb-4 text-xl description">
+      {{ project().shortDescription }}
+    </p>
     @if (view() === 'grid') {
     <ng-container [ngTemplateOutlet]="skills"></ng-container>
     }
@@ -41,37 +45,18 @@
         <ng-container [ngTemplateOutlet]="skills"></ng-container>
         }
       </section>
-      <section class="right flex justify-end gap-2 grow">
-        @if(project().liveUrl) {
-        <a
-          [href]="project().liveUrl"
-          target="_blank"
-          size="small"
-          pButton
-          class="p-button-flat p-button-text"
-        >
-          <i class="material-symbols-outlined">kid_star</i>
-          <span>Live</span>
-        </a>
-        }
-        <a
-          [routerLink]="['/project', project().id]"
-          size="small"
-          pButton
-          class="p-button-flat p-button-primary"
-        >
-          <i class="material-symbols-outlined">arrow_right_alt</i>
-          <span>Details</span>
-        </a>
-      </section>
     </div>
   </div>
 </div>
 
 <ng-template #skills>
   <div class="skills flex flex-wrap gap-2">
-    @for(technology of project().technologies; track technology) {
-    <app-tech-pill [technology]="technology" [flat]="true"></app-tech-pill>
+    @for(technology of project().technologies.slice(0, 4); track technology) {
+    <div
+      class="skill-item uppercase text-secondary rounded-md text-sm font-semibold px-2 py-1"
+    >
+      {{ technology }}
+    </div>
     }
   </div>
 </ng-template>
