@@ -13,7 +13,7 @@ html {
   --text-color-inverse: var(--color-neutral-50);
   --text-secondary-color: var(--color-neutral-600);
   --text-highlight-start-color: var(--color-red-500);
-  --text-highlight-end-color: var(--color-orange-900);
+  --text-highlight-end-color: var(--color-orange-400);
 
   /* Border Colors */
   --border-color: var(--color-neutral-300);
@@ -33,11 +33,11 @@ html {
     --text-color: var(--color-neutral-50);
     --text-color-inverse: var(--color-neutral-950);
     --text-secondary-color: var(--color-neutral-400);
-    --text-highlight-start-color: var(--color-pink-500);
-    --text-highlight-end-color: var(--color-orange-700);
+    --text-highlight-start-color: var(--color-pink-400);
+    --text-highlight-end-color: var(--color-orange-600);
 
     /* Border Colors */
-    --border-color: var(--color-neutral-700);
+    --border-color: var(--color-neutral-800);
 
     /* Spotlight colors */
     --spotlight-highlight-color: var(--color-rose-700);

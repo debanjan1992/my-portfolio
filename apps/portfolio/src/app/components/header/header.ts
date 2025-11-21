@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { Divider } from 'primeng/divider';
+import { ThemeService } from '../../services/theme';
 
 @Component({
   selector: 'app-header',
@@ -13,14 +14,9 @@ import { Divider } from 'primeng/divider';
 })
 export class Header {
   store = inject(PortfolioStore);
-
-  isDarkMode() {
-    const element = document.querySelector('html');
-    return element.classList.contains('app-dark-theme');
-  }
+  themeService = inject(ThemeService);
 
   toggleDarkMode() {
-    const element = document.querySelector('html');
-    element.classList.toggle('app-dark-theme');
+    this.themeService.toggleTheme();
   }
 }

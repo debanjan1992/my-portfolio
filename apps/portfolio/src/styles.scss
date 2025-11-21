@@ -1,3 +1,7 @@
+html.app-dark-theme .img-dark {
+  clip-path: circle(150% at 50% 50%);
+}
+
 body {
   font-family: Inter;
   font-size: 16px;
@@ -15,8 +19,20 @@ body {
   color: var(--text-color);
 }
 
-.material-symbols-outlined {
-  font-size: 1rem;
+.faded-separator {
+  border: 0; 
+  
+  height: 1px; 
+  
+  background-image: linear-gradient(
+    to right, 
+    rgba(0, 0, 0, 0),
+    var(--p-primary-color),
+    rgba(0, 0, 0, 0)
+  );
+  
+  width: 100%; 
+  margin: 1.5rem 0;
 }
 
 *::selection {
@@ -25,7 +41,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -33,6 +49,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 12px;
+  background: var(--p-surface-600);
 }

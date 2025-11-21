@@ -17,7 +17,7 @@
   </nav>
   <p-divider layout="vertical" />
   <p-button size="small" [text]="true" (onClick)="toggleDarkMode()">
-    @if(isDarkMode()) {
+    @if(themeService.isDarkMode()) {
     <i
       class="material-symbols-outlined"
       pTooltip="Toggle light mode"
