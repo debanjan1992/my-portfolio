@@ -1,44 +1,69 @@
-<div class="contact-container p-4 flex justify-center">
-  <div
-    class="wrapper w-3/5 p-8 card rounded-md"
-    appSpotlight
-    [spotlightRadius]="300"
-  >
-    <div class="header mb-8 text-sm flex items-center gap-2 text-secondary">
-      <span class="material-symbols-outlined"> contact_page </span>
-      <em>{{ headerText() }}</em>
-    </div>
-    <header>
-      <p class="text-5xl text-center font-medium">Get in touch</p>
+<div class="contact-me flex justify-between gap-16">
+  <section class="left w-8/11">
+    <header class="mb-16">
+      <p
+        class="text-primary text-md tracking-widest font-medium mb-4 flex items-center gap-2"
+      >
+        <span class="material-symbols-outlined"> terminal </span>
+        <span class="lowercase"
+          >{{ store.profile().firstName + store.profile().lastName }}</span
+        >/ contact-me
+      </p>
+      <p class="text-6xl font-extrabold mb-6">Let's work together</p>
+      <p class="text-secondary text-xl font-medium">
+        Have a project in mind or just want to say hi? Fill out the form below
+        or send me an email directly. I'm always open to discussing new ideas.
+      </p>
     </header>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <div class="flex flex-col gap-2 mb-4">
-        <label for="username" class="text-sm"
-          >Name<span class="required">*</span></label
-        >
-        <input pInputText id="name" formControlName="name" />
-        @if(name.touched && name.dirty && name.errors?.required) {
-        <small class="error-text">- This field is required</small>
-        } @if(name.touched && name.dirty && name.errors?.minlength) {
-        <small class="error-text"
-          >- Name should be minimum 3 characters in length.</small
-        >
-        }
+      <div class="form-group flex gap-8 mb-6">
+        <div class="flex flex-col gap-2 grow">
+          <label for="username" class="text-sm text-secondary font-medium"
+            >NAME<span class="required">*</span></label
+          >
+          <input
+            pInputText
+            id="name"
+            formControlName="name"
+            pSize="large"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="flex flex-col gap-2 grow">
+          <label for="email" class="text-sm text-secondary font-medium"
+            >EMAIL<span class="required">*</span></label
+          >
+          <input
+            pInputText
+            id="email"
+            formControlName="email"
+            pSize="large"
+            placeholder="john@example.com"
+          />
+        </div>
       </div>
-      <div class="flex flex-col gap-2 mb-4">
-        <label for="email" class="text-sm"
-          >Email<span class="required">*</span></label
+      <div class="flex flex-col gap-2 grow mb-6">
+        <label for="username" class="text-sm text-secondary font-medium"
+          >SUBJECT</label
         >
-        <input pInputText id="email" formControlName="email" />
-        @if(email.touched && email.dirty && email.errors?.required) {
-        <small class="error-text">- This field is required</small>
-        } @if(email.touched && email.dirty && email.errors?.email) {
-        <small class="error-text">- Email should be valid.</small>
-        }
+        <!-- <input
+          pInputText
+          id="name"
+          formControlName="subject"
+          pSize="large"
+          placeholder="General Enquiry"
+        /> -->
+        <p-select
+          [options]="allSubjects()"
+          formControlName="subject"
+          optionLabel="name"
+          placeholder="Select Subject"
+          class="w-full"
+        />
       </div>
-      <div class="flex flex-col gap-2 mb-4">
-        <label for="message" class="text-sm"
-          >Message<span class="required">*</span></label
+      <div class="flex flex-col gap-2 mb-6">
+        <label for="message" class="text-sm text-secondary font-medium"
+          >MESSAGE<span class="required ms-1">*</span></label
         >
         <textarea
           id="message"
@@ -46,23 +71,57 @@
           cols="30"
           pTextarea
           formControlName="message"
+          pSize="large"
+          placeholder="Tell me about your project..."
         ></textarea>
-        @if(message.touched && message.dirty && message.errors?.required) {
-        <small class="error-text">- This field is required</small>
-        } @if(message.touched && message.dirty && message.errors?.minlength) {
-        <small class="error-text"
-          >- Message should be minimum 10 characters in length.</small
-        >
-        }
       </div>
-      <div class="actions flex justify-end">
-        <p-button [disabled]="contactForm.invalid" type="submit"
-          >Send Message</p-button
+      <div class="actions flex justify-end mt-18">
+        <button
+          class="cursor-pointer rounded-full flex items-center p-6 text-xl gap-2 font-semibold"
+          [disabled]="contactForm.invalid"
+          type="submit"
         >
+          <span class="material-symbols-outlined"> send </span>
+          <span>Send Message</span>
+        </button>
       </div>
     </form>
-    <!-- <pre>
-        {{message.errors | json}}
-    </pre> -->
-  </div>
+  </section>
+
+  <section class="right ms-8 flex flex-col gap-8">
+    <div class="card rounded-xl p-8 availability">
+      <header class="flex items-center gap-4 mb-4 text-xl">
+        <span class="status-dot rounded-full"></span>
+        <p class="font-semibold">AVAILABLE FOR WORK</p>
+      </header>
+      <p class="text-xl text-secondary">
+        Currently accepting new freelance projects. Let's discuss your
+        requirements.
+      </p>
+    </div>
+    <div class="card rounded-xl p-8">
+      <header class="flex items-center gap-4 mb-4 text-xl">
+        <span class="material-symbols-outlined text-primary"> build </span>
+        <p class="font-semibold">What I can help with</p>
+      </header>
+      <ul class="text-xl text-secondary">
+        <li class="flex items-center gap-4 mb-2">
+          <span class="material-symbols-outlined"> code </span>
+          <p>Web Application Development</p>
+        </li>
+        <li class="flex items-center gap-4 mb-2">
+          <span class="material-symbols-outlined"> palette </span>
+          <p>UI/UX Implementation</p>
+        </li>
+        <li class="flex items-center gap-4 mb-2">
+          <span class="material-symbols-outlined"> moving </span>
+          <p>UI Migrations</p>
+        </li>
+        <li class="flex items-center gap-4 mb-2">
+          <span class="material-symbols-outlined"> design_services </span>
+          <p>Responsive Design Systems</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>

@@ -1,28 +1,20 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import {
   FormControl,
   NonNullableFormBuilder,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Button } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TextareaModule } from 'primeng/textarea';
 import { PortfolioStore } from '../../store/store';
-import { SpotlightDirective } from '../../directives/spotlight.directive';
 import { PortfolioService } from '../../portfolio';
-import { ToastModule } from 'primeng/toast';
+import { SelectModule } from 'primeng/select';
 import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
-  imports: [
-    Button,
-    ReactiveFormsModule,
-    InputTextModule,
-    TextareaModule,
-    SpotlightDirective,
-  ],
+  imports: [ReactiveFormsModule, InputTextModule, TextareaModule, SelectModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
   providers: [],
@@ -33,13 +25,25 @@ export class Contact {
   store = inject(PortfolioStore);
   portfolioService = inject(PortfolioService);
 
+  allSubjects = signal<{ name: string }[]>([
+    { name: 'General Inquiry' },
+    { name: 'Freelance Project' },
+    { name: 'Job Opportunity  ' },
+    { name: 'Technical Consultation' },
+  ]);
+
   contactForm = this.fb.group<{
     name: FormControl<string>;
     email: FormControl<string>;
+    subject: FormControl<{ name: string }>;
     message: FormControl<string>;
   }>({
-    name: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+    name: this.fb.control('', [Validators.required]),
     email: this.fb.control('', [Validators.required, Validators.email]),
+    subject: this.fb.control({ name: 'General Inquiry' }, [
+      Validators.required,
+      Validators.email,
+    ]),
     message: this.fb.control('', [
       Validators.required,
       Validators.minLength(20),
@@ -69,8 +73,18 @@ export class Contact {
     this.portfolioService
       .sendEmailMessage(this.name.value, this.email.value, this.message.value)
       .subscribe({
-        next: () => this.messageService.add({ severity: 'success', summary: 'Email sent successfully!', life: 3000 }),
-        error: () => this.messageService.add({ severity: 'error', summary: 'Failed to send email!', life: 3000 }),
+        next: () =>
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Email sent successfully!',
+            life: 3000,
+          }),
+        error: () =>
+          this.messageService.add({
+            severity: 'error',
+            summary: 'Failed to send email!',
+            life: 3000,
+          }),
       });
   }
 }

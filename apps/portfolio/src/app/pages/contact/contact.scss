@@ -2,3 +2,93 @@
 .error-text {
   color: red;
 }
+
+::ng-deep {
+  .p-inputtext {
+    height: 70px;
+    border: none !important;
+    background-color: var(--surface-bg-color) !important;
+    padding: 1rem;
+  }
+  .p-textarea {
+    border: none !important;
+    background-color: var(--surface-bg-color) !important;
+    padding: 1rem;
+    resize: none;
+  }
+
+  .p-select {
+    height: 70px;
+    border: none !important;
+    background-color: var(--surface-bg-color) !important;
+    padding: 1rem;
+
+    .p-select-label {
+      color: var(--text-secondary-color);
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.card {
+  background-color: var(--surface-bg-color);
+  border: 1px solid var(--border-color);
+  width: 30rem;
+}
+
+.actions button {
+  background-color: var(--p-primary-500);
+  color: var(--text-color);
+  transition: 0.4s;
+
+  &:hover {
+    background-color: var(--p-primary-color);
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+    background-color: var(--surface-bg-color);
+  }
+}
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.card.availability {
+  header {
+    color: #2ecc71;
+
+    .status-dot {
+      width: 1rem;
+      height: 1rem;
+      background-color: #2ecc71; /* Bright Green */
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #2ae97a;
+        border-radius: 50%;
+        // z-index: -1; /* Places ring behind the dot */
+        animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.5); /* Expands to 2.5x size */
+    opacity: 0; /* Fades to invisible */
+  }
+}
