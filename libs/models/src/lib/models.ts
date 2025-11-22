@@ -27,6 +27,7 @@ export interface Experience {
   technologies: string[];
   roles: {
     designation: string;
+    description?: string;
     startDate: number;
     endDate: number;
   }[];

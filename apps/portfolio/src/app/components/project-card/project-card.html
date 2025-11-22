@@ -3,7 +3,7 @@
   appSpotlight
   [spotlightRadius]="300"
   [ngClass]="view()"
-  [routerLink]="['/project', project().id]"
+  [routerLink]="['/projects', project().id]"
 >
   @if (view() === 'grid') {
   <div class="image-wrapper relative overflow-hidden h-full">
@@ -24,7 +24,7 @@
   </div>
   }
 
-  <div class="grow flex-column align-end p-4">
+  <div class="grow flex-column align-end p-6 pt-8">
     <header class="flex items-center gap-4 mb-2">
       <h1 class="font-bold text-2xl" [class.text-primary]="hovered()">
         {{ project().title }}

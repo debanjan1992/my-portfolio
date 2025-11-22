@@ -1,15 +1,7 @@
 section {
   &.filters {
     border: 1px solid var(--border-color);
-    background-color: var(--p-surface-950);
-  }
-  ul.view-filters {
-    li {
-      &.active {
-        background-color: var(--p-surface-900);
-        color: var(--text-color);
-      }
-    }
+    background-color: var(--surface-bg-color);
   }
   ul.tech-filters {
     li {

@@ -1,6 +1,9 @@
 .bio-card {
-  background-color: var(--sidebar-bg-color);
-  position: relative;
+  background-color: var(--surface-bg-color);
+  overflow: hidden;
+  section.container {
+    position: relative;
+  }
 }
 
 .profile-image {
@@ -30,38 +33,50 @@
 
 .title {
   border: 1px solid var(--border-color);
-  background-color: var(--p-surface-800);
+  background-color: var(--p-surface-900);
   color: var(--p-surface-300);
 }
 
 .short-description {
   border-left: 3px solid var(--p-primary-color);
+  background-color: var(--p-surface-900);
+}
+
+.icon-wrapper {
   background-color: var(--p-surface-800);
 }
 
-.email {
-  border: 1px solid var(--border-color);
-  color: var(--p-surface-300);
-  background-color: var(--p-surface-800);
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .download-wrapper {
+    button {
+      background-color: var(--bg-color-inverse);
+      color: var(--text-color-inverse);
+      transition: 0.4s;
 
-  .email-icon {
-    border-radius: 100%;
-    background-color: color-mix(in srgb, var(--p-primary-900), transparent 75%);
-  }
-}
-
-.social-links {
-  a {
-    border: 1px solid var(--border-color);
-    background-color: var(--p-surface-800);
-    transition: 0.4s;
-
-    svg {
-      fill: var(--p-surface-300);
+      &:hover {
+        background-color: var(--p-primary-color);
+        color: var(--text-color);
+      }
     }
+  }
 
-    &:hover {
-      background-color: var(--p-surface-600);
+  .social-links {
+    a {
+      border: 1px solid var(--border-color);
+      background-color: var(--p-surface-800);
+      transition: 0.4s;
+
+      svg {
+        fill: var(--p-surface-300);
+      }
+
+      &:hover {
+        background-color: var(--p-surface-700);
+      }
     }
   }
 }

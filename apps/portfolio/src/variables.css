@@ -5,10 +5,9 @@ html {
   /* Background and Surface Colors */
   --bg-color: white;
   --bg-color-inverse: black;
-  --bg-color-muted: var(--color-neutral-200);
-  --sidebar-bg-color: var(--color-zinc-100);
   --p-tabs-tabpanel-background: transparent !important;
   --p-tabs-tablist-background: transparent !important;
+  --surface-bg-color: var(--p-surface-900);
 
   /* Text Colors */
   --text-color: var(--color-neutral-950);
@@ -29,7 +28,6 @@ html {
     /* Background and Surface Colors */
     --bg-color: black;
     --bg-color-inverse: white;
-    --sidebar-bg-color: var(--p-surface-900);
 
     /* Text Colors */
     --text-color: var(--color-neutral-50);
@@ -39,7 +37,7 @@ html {
     --text-highlight-end-color: var(--color-orange-600);
 
     /* Border Colors */
-    --border-color: var(--color-neutral-800);
+    --border-color: var(--p-surface-800);
 
     /* Spotlight colors */
     --spotlight-highlight-color: var(--color-rose-700);

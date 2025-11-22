@@ -1,11 +1,10 @@
 <div class="welcome-banner">
-  <h1 class="text-7xl md:text-9xl font-extrabold">
-    Building digital <span class="highlight">experiences</span> that matter.
-  </h1>
+  <h1 class="text-7xl md:text-9xl font-extrabold" [innerHTML]="heroText()"></h1>
   <p class="text-3xl mt-8 font-medium text-secondary">
-    Hi, I'm <span class="text-default">Debanjan</span>. I specialize in
-    architecting robust backend systems and crafting intuitive, pixel-perfect
-    frontend interfaces. Currently driving innovation at FICO.
+    Hi, I'm <span class="text-default">{{ store.profile().firstName }}</span>. I leverage
+    <span class="text-default">{{store.totalExperience().years}}+</span> years
+    of full-stack mastery in Angular, React, NodeJS and AI to build intelligent
+    web solutions that scale.
   </p>
   <div class="actions mt-12 flex items-center gap-8">
     <button
@@ -19,8 +18,8 @@
       class="text-xl font-bold px-8 py-6 secondary flex items-center gap-2"
       (click)="store.downloadResume()"
     >
-      <i class="material-symbols-outlined">download</i>
-      <span class="me-2">Download Resume</span>
+      <i class="material-symbols-outlined">lightbulb</i>
+      <span class="me-2">About Me</span>
     </button>
   </div>
 </div>

@@ -26,3 +26,28 @@ export const MASTER_SKILLS: Record<string, { title: string; color: string }> = {
   nx: { title: 'Nx', color: '#143055' },
   tailwind: { title: 'Tailwind CSS', color: '#06b6d4' },
 };
+
+export const getDurationInYearsAndMonths = (startDate: number, endDate: number) => {
+  if (endDate === 0) {
+    endDate = new Date().getTime();
+  }
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  if (months < 0 || (months === 0 && end.getDate() < start.getDate())) {
+    years--;
+    months += 12;
+  }
+
+  if (end.getDate() < start.getDate()) {
+    months--;
+    if (months < 0) {
+      months = 11;
+    }
+  }
+
+  return { years, months };
+};

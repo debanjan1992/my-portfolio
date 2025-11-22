@@ -1,23 +1,19 @@
 import { SvgIconComponent } from '../svg-icon/svg-icon';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Experience } from '@portfolio/models';
-import { Avatar } from 'primeng/avatar';
 import { DatePipe } from '@angular/common';
 
 import { SpotlightDirective } from '../../directives/spotlight.directive';
 import { ChipModule } from 'primeng/chip';
-import { TechnologyPillComponent } from '../technology-pill';
 import { Divider } from 'primeng/divider';
 
 @Component({
   selector: 'app-experience-item',
   imports: [
-    Avatar,
     DatePipe,
     SvgIconComponent,
     SpotlightDirective,
     ChipModule,
-    TechnologyPillComponent,
     Divider,
   ],
   templateUrl: './experience-item.html',

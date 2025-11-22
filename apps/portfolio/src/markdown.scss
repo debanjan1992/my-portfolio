@@ -98,7 +98,7 @@
 
   /* --- INLINE CODE (`variable`) --- */
   code {
-    background-color: var(--p-surface-950);
+    background-color: var(--surface-bg-color);
     color: var(--text-color);
     font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
     padding: 0.2em 0.4em;
@@ -110,7 +110,7 @@
 
   /* --- CODE BLOCKS (```js ...) --- */
   pre {
-    background-color: var(--p-surface-950);
+    background-color: var(--surface-bg-color);
     color: var(--text-color);
     padding: 1.25rem;
     border-radius: 8px;
@@ -137,7 +137,7 @@
   }
 
   th {
-    background-color: var(--p-surface-900);
+    background-color: var(--surface-bg-color);
     text-align: left;
     font-weight: 600;
     padding: 0.75rem;

@@ -1,11 +1,13 @@
-.highlight {
-  background-clip: text;
-  background-image: linear-gradient(
-    to right,
-    var(--text-highlight-start-color),
-    var(--text-highlight-end-color)
-  );
-  color: transparent;
+::ng-deep {
+  .highlight {
+    background-clip: text;
+    background-image: linear-gradient(
+      to right,
+      var(--text-highlight-start-color),
+      var(--text-highlight-end-color)
+    );
+    color: transparent;
+  }
 }
 
 .actions {

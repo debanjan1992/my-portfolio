@@ -14,7 +14,7 @@ import { map, pipe, switchMap } from 'rxjs';
 import { PortfolioService } from '../portfolio';
 import { Experience } from '@portfolio/models';
 import { HttpClient } from '@angular/common/http';
-import { convertToHtml } from '../utilities';
+import { convertToHtml, getDurationInYearsAndMonths } from '../utilities';
 
 const initialState: PortfolioStoreState = {
   profile: null,
@@ -81,9 +81,8 @@ export const PortfolioStore = signalStore(
             tapResponse({
               next: (projects) => {
                 const allTechnologies = Array.from(
-                  new Set(projects.map((p) => p.technologies).flat())
+                  new Set<string>(projects.map((p) => p.technologies).flat())
                 );
-                console.log(allTechnologies);
                 patchState(store, { projects, technologies: allTechnologies });
               },
               error: () => null,
@@ -116,6 +115,12 @@ export const PortfolioStore = signalStore(
       store.profile()
         ? store.profile().firstName + ' ' + store.profile().lastName
         : ''
+    ),
+    totalExperience: computed(() =>
+      getDurationInYearsAndMonths(
+        store.profile().careerStart,
+        new Date().getTime()
+      )
     ),
   }))
 );

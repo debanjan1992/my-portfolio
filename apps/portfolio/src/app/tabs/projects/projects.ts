@@ -1,11 +1,8 @@
 import {
   Component,
-  computed,
   effect,
   inject,
   linkedSignal,
-  model,
-  OnInit,
   signal,
 } from '@angular/core';
 import { PortfolioStore } from '../../store/store';
@@ -14,7 +11,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { NgClass } from '@angular/common';
-import { Divider } from 'primeng/divider';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -24,8 +21,8 @@ import { Divider } from 'primeng/divider';
     FormsModule,
     ButtonModule,
     NgClass,
-    Divider,
-  ],
+    RouterOutlet
+],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

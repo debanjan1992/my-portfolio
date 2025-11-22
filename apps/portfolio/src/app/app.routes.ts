@@ -9,8 +9,20 @@ export const appRoutes: Route[] = [
   { path: 'welcome', component: Welcome, title: 'Debanjan Saha | Welcome' },
   {
     path: 'projects',
-    component: Projects,
     title: 'Debanjan Saha | Projects',
+    children: [
+      {
+        path: '',
+        component: Projects
+      },
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('./pages/project-details/project-details').then(
+            (m) => m.ProjectDetails
+          ),
+      },
+    ],
   },
   {
     path: 'experience',
@@ -18,11 +30,4 @@ export const appRoutes: Route[] = [
     title: 'Debanjan Saha | Experience',
   },
   { path: 'contact', component: Contact, title: 'Debanjan Saha | Contact' },
-  {
-    path: 'project/:id',
-    loadComponent: () =>
-      import('./pages/project-details/project-details').then(
-        (m) => m.ProjectDetails
-      ),
-  },
 ];

@@ -4,7 +4,11 @@
     <section class="flex items-center justify-between">
       <p class="text-secondary text-2xl font-medium w-3/5">
         Over
-        <span class="text-default font-semibold">{{totalExperience()}}</span>
+        <span class="text-default font-semibold"
+          >{{store.totalExperience().years}} years
+          @if(store.totalExperience().months) {
+          <span> and {{ store.totalExperience().months }} months</span>}</span
+        >
         of experience architecting scalable frontend solutions and leading
         development teams in the fintech and analytics domains.
       </p>

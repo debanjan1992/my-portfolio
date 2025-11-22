@@ -10,7 +10,6 @@ import { providePrimeNG } from 'primeng/config';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { PortfolioService } from './portfolio';
-import { OfflinePortfolioService } from './portfolio.offline';
 import { PortfolioThemePreset } from './theme.preset';
 import { ThemeService } from './services/theme';
 
@@ -33,7 +32,7 @@ export const appConfig: ApplicationConfig = {
     }),
     {
       provide: PortfolioService,
-      useClass: OfflinePortfolioService,
+      useClass: PortfolioService,
     },
     ThemeService,
   ],
