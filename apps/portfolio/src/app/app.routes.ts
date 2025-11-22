@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
-import { Welcome } from './tabs/welcome/welcome';
-import { Contact } from './tabs/contact/contact';
-import { Experience } from './tabs/experience/experience';
-import { Projects } from './tabs/projects/projects';
+import { Welcome } from './pages/welcome/welcome';
+import { Contact } from './pages/contact/contact';
+import { Experience } from './pages/experience/experience';
+import { Projects } from './pages/projects/projects';
 
 export const appRoutes: Route[] = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -18,7 +18,7 @@ export const appRoutes: Route[] = [
       {
         path: ':id',
         loadComponent: () =>
-          import('./pages/project-details/project-details').then(
+          import('./pages/projects/project-details/project-details').then(
             (m) => m.ProjectDetails
           ),
       },

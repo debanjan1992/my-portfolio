@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { PortfolioStore } from '../../store/store';
-import { WelcomeBanner } from '../../components/welcome-banner/welcome-banner';
 import { AboutMe } from '../../components/about-me/about-me';
+import { WelcomeBanner } from './welcome-banner/welcome-banner';
 
 @Component({
   selector: 'app-welcome',

@@ -11,19 +11,19 @@ import {
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Project } from '@portfolio/models';
 import { ButtonModule } from 'primeng/button';
-import { PortfolioService } from '../../portfolio';
+import { PortfolioService } from '../../../portfolio';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { SpotlightDirective } from '../../directives/spotlight.directive';
+import { SpotlightDirective } from '../../../directives/spotlight.directive';
 import { TabsModule } from 'primeng/tabs';
 import { Divider } from 'primeng/divider';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { HttpClient } from '@angular/common/http';
-import { PortfolioStore } from '../../store/store';
+import { PortfolioStore } from '../../../store/store';
 import {
   BarDataInput,
   BarVisualization,
-} from '../../components/bar-visualization/bar-visualization/bar-visualization';
-import { TechnologyPillComponent } from '../../components/technology-pill';
+} from '../../../components/bar-visualization/bar-visualization/bar-visualization';
+import { TechnologyPillComponent } from '../../../components/technology-pill';
 import { DatePipe } from '@angular/common';
 
 @Component({

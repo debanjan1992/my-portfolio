@@ -1,11 +1,10 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PortfolioStore } from '../../store/store';
-import { ExperienceItem } from '../../components/experience-item/experience-item';
-import { NgIf } from '@angular/common';
+import { ExperienceItem } from './experience-item/experience-item';
 
 @Component({
   selector: 'app-experience',
-  imports: [ExperienceItem, NgIf],
+  imports: [ExperienceItem],
   templateUrl: './experience.html',
   styleUrl: './experience.scss',
 })

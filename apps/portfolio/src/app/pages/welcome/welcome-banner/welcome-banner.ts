@@ -6,7 +6,7 @@ import {
   signal,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PortfolioStore } from '../../store/store';
+import { PortfolioStore } from '../../../store/store';
 
 @Component({
   selector: 'app-welcome-banner',

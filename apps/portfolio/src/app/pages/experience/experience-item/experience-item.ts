@@ -1,17 +1,15 @@
-import { SvgIconComponent } from '../svg-icon/svg-icon';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Experience } from '@portfolio/models';
 import { DatePipe } from '@angular/common';
 
-import { SpotlightDirective } from '../../directives/spotlight.directive';
 import { ChipModule } from 'primeng/chip';
 import { Divider } from 'primeng/divider';
+import { SpotlightDirective } from '../../../directives/spotlight.directive';
 
 @Component({
   selector: 'app-experience-item',
   imports: [
     DatePipe,
-    SvgIconComponent,
     SpotlightDirective,
     ChipModule,
     Divider,
