@@ -1,5 +1,5 @@
-html.app-dark-theme .img-dark {
-  clip-path: circle(150% at 50% 50%);
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,18 +20,18 @@ body {
 }
 
 .faded-separator {
-  border: 0; 
-  
-  height: 1px; 
-  
+  border: 0;
+
+  height: 1px;
+
   background-image: linear-gradient(
-    to right, 
+    to right,
     rgba(0, 0, 0, 0),
     var(--p-primary-color),
     rgba(0, 0, 0, 0)
   );
-  
-  width: 100%; 
+
+  width: 100%;
   margin: 1.5rem 0;
 }
 

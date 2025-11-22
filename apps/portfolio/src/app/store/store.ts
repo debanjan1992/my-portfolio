@@ -21,6 +21,7 @@ const initialState: PortfolioStoreState = {
   technologies: [],
   experiences: [],
   projects: [],
+  featured: ["calendar-angular-app", "quiz-me-react-chrome-extension", "tasks-angular-app"],
 };
 export const PortfolioStore = signalStore(
   withState(initialState),

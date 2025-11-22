@@ -1,0 +1,16 @@
+<div class="featured-projects">
+  <header class="flex items-center justify-between mb-16">
+    <h1 class="text-5xl font-bold">Featured Projects</h1>
+    <p-button link [routerLink]="['/projects']">
+      <div class="flex items-center">
+        <span class="me-2">View all</span
+        ><span class="material-symbols-outlined"> more_up </span>
+      </div>
+    </p-button>
+  </header>
+  <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+    @for(project of featuredProjects(); track project.id) {
+    <app-project-card [project]="project" view="grid" />
+    }
+  </section>
+</div>

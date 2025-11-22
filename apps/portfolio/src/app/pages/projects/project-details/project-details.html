@@ -3,12 +3,13 @@
     <div class="breadcrumbs mb-1 -ml-2">
       <a
         [routerLink]="['/projects']"
-        size="small"
         pButton
         class="p-button-flat p-button-primary p-button-text"
       >
-        <i class="material-symbols-outlined">arrow_left_alt</i>
-        <span>Details</span>
+        <div class="flex items-center gap-2">
+          <i class="material-symbols-outlined">arrow_left_alt</i>
+          <span class="text-lg">All Projects</span>
+        </div>
       </a>
     </div>
     @if(project()) {

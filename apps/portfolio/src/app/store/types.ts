@@ -5,4 +5,5 @@ export interface PortfolioStoreState {
   technologies: string[];
   experiences: Experience[];
   projects: Project[];
+  featured: string[];
 }
